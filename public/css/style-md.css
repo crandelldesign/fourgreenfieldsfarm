@@ -1,0 +1,7 @@
+/* Stylesheet for Medium Width (Desktop) Devices */
+
+/* Header */
+.header .navbar-nav>li>a {
+	font-size: 19px;
+	padding: 15px 19px;
+}

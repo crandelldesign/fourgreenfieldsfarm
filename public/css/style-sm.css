@@ -1,0 +1,111 @@
+/* Stylesheet for Small Width (Tablet) Devices */
+
+.page {
+	position: relative;
+	min-height: 100%;
+	max-width:	1060px;
+	margin-left: auto;
+	margin-right: auto;
+	overflow:hidden;
+}
+
+/* Header */
+.header {
+	height: 200px;
+	background-image: url(../img/header-bg.jpg);
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	/*overflow: hidden;*/
+	position: relative;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+.header .header-top {
+	display: block !important;
+	padding: 8px 10px 0 10px;
+	background: rgb(12, 0, 74);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7F0d004c,endColorstr=#7F0d004c);
+	background: rgba(13, 0, 74, 0.5);
+	height: 55px;
+	-webkit-border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+	-moz-border-radius-topleft: 10px;
+	-moz-border-radius-topright: 10px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+.header .header-top img {
+	height: 41px;
+	width: 368px;
+}
+.header .col-sm-6.text-right p {
+	font-size: 12px;
+	margin: 0;
+	color: #03CC30;
+	line-height: 13px;
+}
+.header .navbar {
+	background: rgb(12, 0, 74);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7F0d004c,endColorstr=#7F0d004c);
+	background: rgba(13, 0, 74, 0.5);
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	-webkit-border-bottom-right-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	-moz-border-radius-bottomright: 10px;
+	-moz-border-radius-bottomleft: 10px;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+.header .navbar .navbar-header {
+	display: none;
+}
+.header .navbar .navbar-collapse {
+	padding: 0;
+}
+.header .navbar-nav {
+	float: none;
+	margin: 0 auto;
+	display: table;
+	table-layout: fixed;
+}
+.header .navbar-nav>li>a {
+	font-size: 16px;
+	padding: 15px 10px;
+	text-align: center;
+}
+
+/* Content */
+.content {
+	padding: 20px;
+}
+.img-aside-sm {
+	width: auto;
+}
+
+/* Footer */
+.footer-contain {
+	max-width: 1060px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.footer p {
+	font-size: 12px;
+}
+
+/* Calendar */
+.calendar>thead>tr>th {
+	font-size: 14px;
+	padding: 8px;
+}
+.calendar td {
+	height: 80px;
+}
+.calendar td .cal-event {
+	display: block;
+	font-size: 11px;
+	line-height: 12px;
+	margin-bottom: 5px;
+}

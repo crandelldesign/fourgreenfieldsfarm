@@ -1,0 +1,7 @@
+/* Stylesheet for Large Width (Large Monitors) Devices */
+
+/* Header */
+.header .navbar-nav>li>a {
+	font-size: 20px;
+	padding: 15px 19px;
+}
