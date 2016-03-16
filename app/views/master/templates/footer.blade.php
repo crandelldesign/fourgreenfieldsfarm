@@ -5,7 +5,7 @@
     <div class="footer-contain">
         <p>Copyright &copy; {{date("Y")}} Four Green Fields Farm. All Rights Reserved.</p>
         <p>Designated trademarks and brands are the property of their respective owners.</p>
-        <p>Website and graphics are created by Matt Crandell of <a href="http://www.5inalldesign.com">5inallDesign</a>.</p>
+        <p>Website and graphics are created by Matt Crandell of <a href="http://www.crandelldesign.com">Crandell Design</a>.</p>
         <p>
         	<a href="{{url('/')}}/events/admin">Admin Access</a>
         	@if(Auth::check())
