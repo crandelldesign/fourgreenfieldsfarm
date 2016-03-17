@@ -11,4 +11,4 @@
 |
 */
 
-Artisan::add(new ImportCommand);
+//Artisan::add(new ImportCommand);
