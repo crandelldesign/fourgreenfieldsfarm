@@ -229,7 +229,7 @@ EventsControl = can.Control(
     	//this.Search();
     },
     //Events
-    '.last-month click': function(element, event)
+    /*'.last-month click': function(element, event)
     {
         if($('html').hasClass('history'))
         {
@@ -256,7 +256,7 @@ EventsControl = can.Control(
         current_month = next_month;
         current_year = next_month_year;
         this.Search();
-    },
+    },*/
     '.has-event click': function(element, event)
     {
         eventDate = moment(element.data('date')).format('dddd, MMMM Do, YYYY');
