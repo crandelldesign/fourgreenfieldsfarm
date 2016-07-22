@@ -18,7 +18,7 @@
 
 <hr />
 
-<p>Thanks to all of our wonderful customers who gave us another great and fun filled fall season. We never get tired of seeing all the smiles, seeing old friends and meeting new ones, or hearing the screams and laughter in the Haunted Maze.  It is truly a joy and blessing to have you visit our farm. Now its sleigh ride season so put on some warm clothes and boots, book a sleigh ride, and come enjoy Michigan's winter wonderland. Check out what we can offer you by clicking on our &quot;<a href="{{url('/')}}/rides">Hay &amp; Sleigh Rides</a>&quot; tab.</p>
+<p>Every year we are open, we have more fun that the year before. We expect this year to be the same. Our maze, pumpkin patch, and horse drawn wagon rides all waiting for you still at the same low prices as the day we opened in 2006 (see details below). Don’t forget that on Friday and Saturday nights in October we haunt the maze for those brave souls not afraid of what lurks in a dark corn field. Want the Maze all to yourself? We love doing private group bookings. They are great for scouts, church youth groups, family outings, friends, and birthday parties. We offer you use of our picnic area and bonfire pit too. We can also accommodate groups during regular business hours so give us a call.</p>
 
 <hr />
 

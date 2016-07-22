@@ -65,9 +65,9 @@
 <hr>
 
 <div class="row">
-    <div class="col-xs-12 col-sm-4 col-sm-push-4 text-center"><h2><span class="calendar-month">{{date('F',$date)}}</span></h2></div>
-    <div class="col-xs-6 col-sm-4 col-sm-pull-4"><a href="{{url('/')}}/events/{{strtolower(getdate($prevMonth)['month'])}}-{{date('Y',$prevMonth)}}" class="last-month">Last Month</a></div>
-    <div class="col-xs-6 col-sm-4 text-right"><a href="{{url('/')}}/events/{{strtolower(getdate($nextMonth)['month'])}}-{{date('Y',$nextMonth)}}" class="next-month">Next Month</a></div>
+    <div class="col-xs-12 col-sm-4 col-sm-push-4 text-center"><h2 id="calendar"><span class="calendar-month">{{date('F',$date)}}</span></h2></div>
+    <div class="col-xs-6 col-sm-4 col-sm-pull-4"><a href="{{url('/')}}/events/{{strtolower(getdate($prevMonth)['month'])}}-{{date('Y',$prevMonth)}}#calendar" class="last-month">Last Month</a></div>
+    <div class="col-xs-6 col-sm-4 text-right"><a href="{{url('/')}}/events/{{strtolower(getdate($nextMonth)['month'])}}-{{date('Y',$nextMonth)}}#calendar" class="next-month">Next Month</a></div>
 </div>
 <div class="clearfix"></div>
 <table class="table calendar">
