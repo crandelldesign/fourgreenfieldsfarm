@@ -1,4 +1,4 @@
-<title>{{isset($title) ? $title.' | ' : ''}}Christ Lutheran Church of Waterford</title>
+<title>{{isset($title) ? $title.' | ' : ''}}Four Green Fields Farm | Rodney, MI</title>
 <meta name="description" content="{{isset($description) ? $description : ''}}">
 
 <meta name="viewport" content="width=device-width, initial-scale=1">

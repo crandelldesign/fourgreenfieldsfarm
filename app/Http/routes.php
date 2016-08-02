@@ -10,5 +10,7 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-
+Route::get('/style', function () {
+    return view('style');
+});
 Route::controller('/', 'HomeController');

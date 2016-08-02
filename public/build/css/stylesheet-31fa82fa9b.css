@@ -7923,11 +7923,6 @@ body {
     .page {
       position: relative; } }
 
-@media (min-width: 768px) {
-  .content {
-    padding: 5px 0 5px 15px;
-    margin-left: 200px; } }
-
 .content > h1:first-child {
   margin-top: 0; }
   @media (min-width: 768px) {
