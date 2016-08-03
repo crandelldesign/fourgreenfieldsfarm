@@ -7,6 +7,13 @@
     </head>
     <body>
         <div class="container-fluid page">
+
+            <header class="style-header">
+                <div class="logo-container">
+                    <img src="{{url('/img/four-green-fields-farm-logo.svg')}}" alt="Four Gren Fields Farm">
+                </div>
+            </header>
+
             <div class="content">
 
                 <div class="row">
@@ -90,7 +97,7 @@
                         <p class="details">Font: Open Sans Regular #252525</p>
                     </div>
                 </div>
-            
+
             </div>
         </div>
 
