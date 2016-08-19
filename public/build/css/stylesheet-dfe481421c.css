@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url(https://fonts.googleapis.com/css?family=EB+Garamond|Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic);
+@import 'https://fonts.googleapis.com/css?family=Cardo:400,400i,700|Lato:100,100i,300,300i,400,400i,700,700i,900,900i';
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
@@ -1052,7 +1052,7 @@ html {
   -webkit-tap-highlight-color: transparent; }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Lato", sans-serif;
   font-size: 14px;
   line-height: 1.42857;
   color: #333333;
@@ -1188,7 +1188,7 @@ h6, .h6 {
     font-size: 75%; }
 
 h1, .h1 {
-  font-size: 40px; }
+  font-size: 36px; }
 
 h2, .h2 {
   font-size: 30px; }
@@ -5118,7 +5118,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Lato", sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -5231,7 +5231,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Lato", sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -7909,6 +7909,7 @@ html {
 body {
   /* Margin bottom by footer height */
   margin-bottom: 95px;
+  font-family: 'Lato', sans-serif;
   color: #252525; }
   @media (min-width: 992px) {
     body {
@@ -7928,5 +7929,15 @@ body {
   @media (min-width: 768px) {
     .content > h1:first-child {
       margin-bottom: 30px; } }
+
+/* Typography */
+h1 {
+  font-family: 'Cardo', serif; }
+
+h2 {
+  font-family: 'Cardo', serif; }
+
+h3 {
+  font-family: 'Cardo', serif; }
 
 /*# sourceMappingURL=stylesheet.css.map */
