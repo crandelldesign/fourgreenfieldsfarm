@@ -99,6 +99,10 @@
                 </div>
 
             </div>
+            <div class="corner-art top-left"></div>
+            <div class="corner-art top-right"></div>
+            <div class="corner-art bottom-left"></div>
+            <div class="corner-art bottom-right"></div>
         </div>
 
         <script type="text/javascript" src="{{ elixir('js/default.js') }}"></script>

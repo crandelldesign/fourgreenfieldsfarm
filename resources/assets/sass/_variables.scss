@@ -20,11 +20,12 @@ $side-z4-shadow: 0 0 28px    7px rgba(#000, 0.25), 0 0 10px 2.5px rgba(#000, 0.2
 $side-z5-shadow: 0 0 38px  9.5px rgba(#000, 0.30), 0 0 12px   3px rgba(#000, 0.22);
 
 // Colors
-$darkblue: #003366;
-$greenblue: #00a99d;
-$gray: #8b8c84;
-$darkgreenblue: #00746b;
-$greenblue2: #1cbbb4;
+$greenhaze: #00A651;
+$jade: lighten($greenhaze,15%); //#00c05d
+$burnham: darken($greenhaze,30%); //#002713
+$cerulean: #00AEEF;
+$dodgerblue: lighten($cerulean,15%); //#3DCAFF
+$allports: darken($cerulean,30%); //#0076a3
 $black: #252525;
 
 // Footer Height
@@ -39,4 +40,7 @@ $font-family-serif: 'Cardo', serif;
 //$font-size-h1: 40px;
 
 // Bootstrap Colors
-$brand-primary: $darkblue;
+$brand-primary: $greenhaze;
+
+// Admin Colors
+$green: $greenhaze;

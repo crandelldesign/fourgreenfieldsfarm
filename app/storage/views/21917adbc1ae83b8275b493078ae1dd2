@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <?php echo $__env->make('master.templates.header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+    </head>
+    <body>
+        <?php echo $__env->make('master.templates.nav', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+        <?php echo $__env->yieldContent('body'); ?>
+        <?php echo $__env->make('master.templates.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+        <script src="<?php echo url('/'); ?>/js/jquery-1.11.1.min.js"></script>
+        <script src="<?php echo url('/'); ?>/js/bootstrap.min.js"></script>
+        <script src="<?php echo url('/'); ?>/js/can.custom.js"></script>
+        <script src="<?php echo url('/'); ?>/js/moment.js"></script>
+        <script src="<?php echo url('/'); ?>/js/featherlight.js"></script>
+        <script src="<?php echo url('/'); ?>/js/featherlight.gallery.js"></script>
+        <script src="<?php echo url('/'); ?>/js/modernizr.custom.65417.js"></script>
+        <script>
+            var baseURL = "<?php echo url('/'); ?>";
+
+            MasterControl = can.Control(
+            {
+                init: function()
+                {
+                    //
+                },
+                //Events
+                'a[data-featherlight="image"] click': function(element, event)
+                {
+                    $('body').addClass('modal-open');
+                },
+                'div.featherlight click': function(element, event)
+                {
+                    $('body').removeClass('modal-open');
+                },
+                //Methods
+            });
+
+            master_control = new MasterControl($('body'));
+        </script>
+
+        <?php echo $__env->yieldContent('footercode'); ?>
+
+        <?php $__env->startSection('code'); ?>
+            <?php echo isset($code) ? $code : ''; ?>
+
+        <?php echo $__env->yieldSection(); ?>
+    </body>
+    
+</html>
