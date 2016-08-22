@@ -57,6 +57,24 @@
                                     #252525
                                 </div>
                             </div>
+                            <div class="col-md-4">
+                                <div class="color-swatch swatch7">
+                                    Black<br>
+                                    #252525
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="color-swatch swatch8">
+                                    Black<br>
+                                    #252525
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="color-swatch swatch9">
+                                    Black<br>
+                                    #252525
+                                </div>
+                            </div>
                         </div>
                         <hr>
                         <h1>Buttons</h1>
