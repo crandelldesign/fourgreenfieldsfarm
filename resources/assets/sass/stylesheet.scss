@@ -73,15 +73,25 @@ body {
     }
 }
 
-/* Typography */
+/* Typography and Colors */
 h1 {
     font-family: 'Cardo', serif;
+    color: $greenhaze;
 }
 h2 {
     font-family: 'Cardo', serif;
+    color: $pirategold;
 }
 h3 {
     font-family: 'Cardo', serif;
+    color: $burnham;
+}
+a {
+    //color: $cerulean;
+    &.hover {
+        color: $dodgerblue;
+        text-decoration: none;
+    }
 }
 
 /* Spacing Elements */

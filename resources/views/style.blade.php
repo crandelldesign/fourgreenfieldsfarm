@@ -23,63 +23,63 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="color-swatch swatch1">
-                                    Dark Blue<br>
-                                    #003366
+                                    Green Haze<br>
+                                    #00A651
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="color-swatch swatch2">
-                                    Green Blue<br>
-                                    #00a99d
+                                    Camarone<br>
+                                    #005a2c
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="color-swatch swatch3">
-                                    Gray<br>
-                                    #8b8c84
+                                    Burnham<br>
+                                    #000d06
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="color-swatch swatch4">
-                                    Dark Green Blue<br>
-                                    #00746b
+                                    Supernova<br>
+                                    #ffcb05
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="color-swatch swatch5">
-                                    Green Blue 2<br>
-                                    #1cbbb4
+                                    Mustard<br>
+                                    #FFDB52
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="color-swatch swatch6">
-                                    Black<br>
-                                    #252525
+                                    Pirate Gold<br>
+                                    #b89100
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="color-swatch swatch7">
-                                    Black<br>
-                                    #252525
+                                    Cerulean<br>
+                                    #00AEEF
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="color-swatch swatch8">
-                                    Black<br>
-                                    #252525
+                                    Dodger Blue<br>
+                                    #3DCAFF
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="color-swatch swatch9">
-                                    Black<br>
-                                    #252525
+                                    Allports<br>
+                                    #0076a3s
                                 </div>
                             </div>
                         </div>
                         <hr>
                         <h1>Buttons</h1>
 
-                        <button class="btn btn-lg btn-blue">This is a large button</button>&nbsp;
+                        <button class="btn btn-lg btn-primary">This is a large button</button>&nbsp;
 
                         <div class="visible-xs-block margin-bottom-10"></div>
 
@@ -92,17 +92,17 @@
                         <h1>Typography</h1>
 
                         <h1>Heading 1</h1>
-                        <p class="details">Font: EB Garamond #003366</p>
+                        <p class="details">Font: Carto #00A651</p>
 
                         <hr>
 
                         <h2>Heading 2</h2>
-                        <p class="details">Font: Open Sans Semibold #00746b</p>
+                        <p class="details">Font: Carto #b89100</p>
 
                         <hr>
 
                         <h3>Heading 3</h3>
-                        <p class="details">Font: Open Sans Regular #252525</p>
+                        <p class="details">Font: Carto #000d06</p>
 
                         <hr>
 
@@ -112,7 +112,7 @@
 
                         <p><a href="#">This is a link</a> - <a href="#" class="hover">This is a hover link</a></p>
 
-                        <p class="details">Font: Open Sans Regular #252525</p>
+                        <p class="details">Font: Lato #252525</p>
                     </div>
                 </div>
 
