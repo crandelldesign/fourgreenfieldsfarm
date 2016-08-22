@@ -20,12 +20,18 @@ $side-z4-shadow: 0 0 28px    7px rgba(#000, 0.25), 0 0 10px 2.5px rgba(#000, 0.2
 $side-z5-shadow: 0 0 38px  9.5px rgba(#000, 0.30), 0 0 12px   3px rgba(#000, 0.22);
 
 // Colors
+// Greens
 $greenhaze: #00A651;
-$jade: lighten($greenhaze,15%); //#00c05d
-$burnham: darken($greenhaze,30%); //#002713
+$camarone: darken($greenhaze,15%); //#005a2c
+$burnham: darken($greenhaze,30%); //#000d06
+// Golds
+$supernova: #ffcb05;
+$mustard: lighten($supernova,15%); //#FFDB52
+$pirategold: darken($supernova,15%); //#b89100
+// Blues
 $cerulean: #00AEEF;
 $dodgerblue: lighten($cerulean,15%); //#3DCAFF
-$allports: darken($cerulean,30%); //#0076a3
+$allports: darken($cerulean,15%); //#0076a3
 $black: #252525;
 
 // Footer Height
