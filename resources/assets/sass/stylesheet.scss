@@ -82,7 +82,7 @@ body {
 /* Typography and Colors */
 h1 {
     font-family: 'Cardo', serif;
-    color: $greenhaze;
+    color: $camarone;
 }
 h2 {
     font-family: 'Cardo', serif;
@@ -90,13 +90,21 @@ h2 {
 }
 h3 {
     font-family: 'Cardo', serif;
-    color: $burnham;
+    color: $holly;
 }
 a {
     //color: $cerulean;
     &.hover {
-        color: $dodgerblue;
+        color: $balihai;
         text-decoration: none;
+    }
+}
+.btn-lynch {
+    background-color: $lynch;
+    color: #FFF;
+    &:hover {
+        background-color: $balihai;
+        color: #FFF;
     }
 }
 
@@ -128,13 +136,13 @@ $top-space-vars: (0 top top, 5 top top, 10 top top, 15 top top, 25 top top, 30 t
     color: #FFF;
     background-color: #eee;
     &.swatch1 {
-        background-color: $greenhaze;
-    }
-    &.swatch2 {
         background-color: $camarone;
     }
+    &.swatch2 {
+        background-color: $greenhaze;
+    }
     &.swatch3 {
-        background-color: $burnham;
+        background-color: $holly;
     }
     &.swatch4 {
         background-color: $supernova;
@@ -146,13 +154,13 @@ $top-space-vars: (0 top top, 5 top top, 10 top top, 15 top top, 25 top top, 30 t
         background-color: $pirategold;
     }
     &.swatch7 {
-        background-color: $cerulean;
+        background-color: $lynch;
     }
     &.swatch8 {
-        background-color: $dodgerblue;
+        background-color: $balihai;
     }
     &.swatch9 {
-        background-color: $allports;
+        background-color: $fiord;
     }
     &.swatch10 {
         background-color: $black;
@@ -160,4 +168,26 @@ $top-space-vars: (0 top top, 5 top top, 10 top top, 15 top top, 25 top top, 30 t
 }
 .details {
     color: #666;
+}
+
+/* Footer */
+footer.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: $footer-height;
+    overflow: hidden;
+    color: #FFF;
+    text-align: center;
+    font-size: 10px;
+    @media (min-width: $screen-sm-min) {
+        font-size: 12px;
+    }
+    > .container-fluid {
+        @include page-width();
+        padding: 15px;
+    }
+    p {
+        margin-bottom: 2px;
+    }
 }

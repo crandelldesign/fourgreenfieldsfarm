@@ -23,20 +23,20 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="color-swatch swatch1">
-                                    Green Haze<br>
-                                    #00A651
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="color-swatch swatch2">
                                     Camarone<br>
                                     #005a2c
                                 </div>
                             </div>
                             <div class="col-md-4">
+                                <div class="color-swatch swatch2">
+                                    Green Haze<br>
+                                    #00A651
+                                </div>
+                            </div>
+                            <div class="col-md-4">
                                 <div class="color-swatch swatch3">
-                                    Burnham<br>
-                                    #000d06
+                                    Holly<br>
+                                    #000e07
                                 </div>
                             </div>
                             <div class="col-md-4">
@@ -59,20 +59,20 @@
                             </div>
                             <div class="col-md-4">
                                 <div class="color-swatch swatch7">
-                                    Cerulean<br>
-                                    #00AEEF
+                                    Lynch<br>
+                                    #647b97
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="color-swatch swatch8">
-                                    Dodger Blue<br>
-                                    #3DCAFF
+                                    Bali Hai<br>
+                                    #91A2B6
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="color-swatch swatch9">
-                                    Allports<br>
-                                    #0076a3s
+                                    Fiord<br>
+                                    #465669
                                 </div>
                             </div>
                         </div>
@@ -83,7 +83,7 @@
 
                         <div class="visible-xs-block margin-bottom-10"></div>
 
-                        <button class="btn btn-darkgreenblue">This is another smaller button</button>
+                        <button class="btn btn-lynch">This is another smaller button</button>
 
                         <hr class="visible-xs-block">
 
@@ -92,17 +92,17 @@
                         <h1>Typography</h1>
 
                         <h1>Heading 1</h1>
-                        <p class="details">Font: Carto #00A651</p>
+                        <p class="details">Font: Carto / Camarone #005a2c</p>
 
                         <hr>
 
                         <h2>Heading 2</h2>
-                        <p class="details">Font: Carto #b89100</p>
+                        <p class="details">Font: Carto / Pirate Gold #b89100</p>
 
                         <hr>
 
                         <h3>Heading 3</h3>
-                        <p class="details">Font: Carto #000d06</p>
+                        <p class="details">Font: Carto / Holly #000e07</p>
 
                         <hr>
 
