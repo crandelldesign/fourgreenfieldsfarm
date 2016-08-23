@@ -17,7 +17,7 @@
                 </ul>
             </li>-->
             <li class="header"></li>
-            <li><a href="{{url('/')}}">Back to CLC Website</a></li>
+            <li><a href="{{url('/')}}">Back to Four Green Fields Farm Website</a></li>
         </ul><!-- /.sidebar-menu -->
     </section>
     <!-- /.sidebar -->

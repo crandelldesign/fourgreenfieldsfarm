@@ -17,17 +17,23 @@ body {
     @media (min-width: $screen-md-min) {
         font-size: 16px;
     }
-    background: #CCC;
+    background: url('/img/background.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 .page {
-    @include page-width();
-    margin-top: 15px;
-    margin-bottom: 15px;
     padding: 15px;
     position: relative;
     background: #FFF;
     @media (min-width: $screen-sm-min) {
         padding: 25px;
+        margin: 15px;
+        @include shadow-2();
+    }
+    @media (min-width: 1300px) {
+        @include page-width();
     }
     .corner-art {
         position: absolute;

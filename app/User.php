@@ -1,6 +1,6 @@
 <?php
 
-namespace fourgreenfieldsfarm;
+namespace christwaterford;
 
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
@@ -10,7 +10,9 @@ use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
 
-class User extends Model implements AuthenticatableContract, AuthorizableContract, CanResetPasswordContract
+class User extends Model implements AuthenticatableContract,
+                                    AuthorizableContract,
+                                    CanResetPasswordContract
 {
     use Authenticatable, Authorizable, CanResetPassword;
 
@@ -34,4 +36,12 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
      * @var array
      */
     protected $hidden = ['password', 'remember_token'];
+
+    /**
+     * Get the events for the user.
+     */
+    public function events()
+    {
+        return $this->hasMany('fourgreenfieldsfarm\CalendarEvent');
+    }
 }
