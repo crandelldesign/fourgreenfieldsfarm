@@ -8227,7 +8227,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ ])
 });
 ;
-/*! version : 4.17.42
+/*! version : 4.15.35
  =========================================================
  bootstrap-datetimejs
  https://github.com/Eonasdan/bootstrap-datetimepicker
@@ -8268,7 +8268,7 @@ return /******/ (function(modules) { // webpackBootstrap
         // AMD is used - Register as an anonymous module.
         define(['jquery', 'moment'], factory);
     } else if (typeof exports === 'object') {
-        module.exports = factory(require('jquery'), require('moment'));
+        factory(require('jquery'), require('moment'));
     } else {
         // Neither AMD nor CommonJS used. Use global variables.
         if (typeof jQuery === 'undefined') {
@@ -8287,8 +8287,8 @@ return /******/ (function(modules) { // webpackBootstrap
 
     var dateTimePicker = function (element, options) {
         var picker = {},
-            date,
-            viewDate,
+            date = moment().startOf('d'),
+            viewDate = date.clone(),
             unset = true,
             input,
             component = false,
@@ -8361,30 +8361,6 @@ return /******/ (function(modules) { // webpackBootstrap
              * Private functions
              *
              ********************************************************************************/
-
-            hasTimeZone = function () {
-                return moment.tz !== undefined && options.timeZone !== undefined && options.timeZone !== null && options.timeZone !== '';
-            },
-
-            getMoment = function (d) {
-                var returnMoment;
-
-                if (d === undefined || d === null) {
-                    returnMoment = moment(); //TODO should this use format? and locale?
-                } else if (hasTimeZone()) { // There is a string to parse and a default time zone
-                    // parse with the tz function which takes a default time zone if it is not in the format string
-                    returnMoment = moment.tz(d, parseFormats, options.useStrict, options.timeZone);
-                } else {
-                    returnMoment = moment(d, parseFormats, options.useStrict);
-                }
-
-                if (hasTimeZone()) {
-                    returnMoment.tz(options.timeZone);
-                }
-
-                return returnMoment;
-            },
-
             isEnabled = function (granularity) {
                 if (typeof granularity !== 'string' || granularity.length > 1) {
                     throw new TypeError('isEnabled expects a single character string parameter');
@@ -8407,7 +8383,6 @@ return /******/ (function(modules) { // webpackBootstrap
                         return false;
                 }
             },
-
             hasTime = function () {
                 return (isEnabled('h') || isEnabled('m') || isEnabled('s'));
             },
@@ -8463,11 +8438,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
                 if (isEnabled('h')) {
                     topRow.append($('<td>')
-                        .append($('<a>').attr({ href: '#', tabindex: '-1', 'title': options.tooltips.incrementHour }).addClass('btn').attr('data-action', 'incrementHours').append($('<span>').addClass(options.icons.up))));
+                        .append($('<a>').attr({href: '#', tabindex: '-1', 'title':'Increment Hour'}).addClass('btn').attr('data-action', 'incrementHours')
+                            .append($('<span>').addClass(options.icons.up))));
                     middleRow.append($('<td>')
-                        .append($('<span>').addClass('timepicker-hour').attr({ 'data-time-component': 'hours', 'title': options.tooltips.pickHour }).attr('data-action', 'showHours')));
+                        .append($('<span>').addClass('timepicker-hour').attr({'data-time-component':'hours', 'title':'Pick Hour'}).attr('data-action', 'showHours')));
                     bottomRow.append($('<td>')
-                        .append($('<a>').attr({ href: '#', tabindex: '-1', 'title': options.tooltips.decrementHour }).addClass('btn').attr('data-action', 'decrementHours').append($('<span>').addClass(options.icons.down))));
+                        .append($('<a>').attr({href: '#', tabindex: '-1', 'title':'Decrement Hour'}).addClass('btn').attr('data-action', 'decrementHours')
+                            .append($('<span>').addClass(options.icons.down))));
                 }
                 if (isEnabled('m')) {
                     if (isEnabled('h')) {
@@ -8476,12 +8453,12 @@ return /******/ (function(modules) { // webpackBootstrap
                         bottomRow.append($('<td>').addClass('separator'));
                     }
                     topRow.append($('<td>')
-                        .append($('<a>').attr({ href: '#', tabindex: '-1', 'title': options.tooltips.incrementMinute }).addClass('btn').attr('data-action', 'incrementMinutes')
+                        .append($('<a>').attr({href: '#', tabindex: '-1', 'title':'Increment Minute'}).addClass('btn').attr('data-action', 'incrementMinutes')
                             .append($('<span>').addClass(options.icons.up))));
                     middleRow.append($('<td>')
-                        .append($('<span>').addClass('timepicker-minute').attr({ 'data-time-component': 'minutes', 'title': options.tooltips.pickMinute }).attr('data-action', 'showMinutes')));
+                        .append($('<span>').addClass('timepicker-minute').attr({'data-time-component': 'minutes', 'title':'Pick Minute'}).attr('data-action', 'showMinutes')));
                     bottomRow.append($('<td>')
-                        .append($('<a>').attr({ href: '#', tabindex: '-1', 'title': options.tooltips.decrementMinute }).addClass('btn').attr('data-action', 'decrementMinutes')
+                        .append($('<a>').attr({href: '#', tabindex: '-1', 'title':'Decrement Minute'}).addClass('btn').attr('data-action', 'decrementMinutes')
                             .append($('<span>').addClass(options.icons.down))));
                 }
                 if (isEnabled('s')) {
@@ -8491,19 +8468,19 @@ return /******/ (function(modules) { // webpackBootstrap
                         bottomRow.append($('<td>').addClass('separator'));
                     }
                     topRow.append($('<td>')
-                        .append($('<a>').attr({ href: '#', tabindex: '-1', 'title': options.tooltips.incrementSecond }).addClass('btn').attr('data-action', 'incrementSeconds')
+                        .append($('<a>').attr({href: '#', tabindex: '-1', 'title':'Increment Second'}).addClass('btn').attr('data-action', 'incrementSeconds')
                             .append($('<span>').addClass(options.icons.up))));
                     middleRow.append($('<td>')
-                        .append($('<span>').addClass('timepicker-second').attr({ 'data-time-component': 'seconds', 'title': options.tooltips.pickSecond }).attr('data-action', 'showSeconds')));
+                        .append($('<span>').addClass('timepicker-second').attr({'data-time-component': 'seconds', 'title':'Pick Second'}).attr('data-action', 'showSeconds')));
                     bottomRow.append($('<td>')
-                        .append($('<a>').attr({ href: '#', tabindex: '-1', 'title': options.tooltips.decrementSecond }).addClass('btn').attr('data-action', 'decrementSeconds')
+                        .append($('<a>').attr({href: '#', tabindex: '-1', 'title':'Decrement Second'}).addClass('btn').attr('data-action', 'decrementSeconds')
                             .append($('<span>').addClass(options.icons.down))));
                 }
 
                 if (!use24Hours) {
                     topRow.append($('<td>').addClass('separator'));
                     middleRow.append($('<td>')
-                        .append($('<button>').addClass('btn btn-primary').attr({ 'data-action': 'togglePeriod', tabindex: '-1', 'title': options.tooltips.togglePeriod })));
+                        .append($('<button>').addClass('btn btn-primary').attr({'data-action': 'togglePeriod', tabindex: '-1', 'title':'Toggle Period'})));
                     bottomRow.append($('<td>').addClass('separator'));
                 }
 
@@ -8537,16 +8514,16 @@ return /******/ (function(modules) { // webpackBootstrap
             getToolbar = function () {
                 var row = [];
                 if (options.showTodayButton) {
-                    row.push($('<td>').append($('<a>').attr({ 'data-action': 'today', 'title': options.tooltips.today }).append($('<span>').addClass(options.icons.today))));
+                    row.push($('<td>').append($('<a>').attr({'data-action':'today', 'title': options.tooltips.today}).append($('<span>').addClass(options.icons.today))));
                 }
                 if (!options.sideBySide && hasDate() && hasTime()) {
-                    row.push($('<td>').append($('<a>').attr({ 'data-action': 'togglePicker', 'title': options.tooltips.selectTime }).append($('<span>').addClass(options.icons.time))));
+                    row.push($('<td>').append($('<a>').attr({'data-action':'togglePicker', 'title':'Select Time'}).append($('<span>').addClass(options.icons.time))));
                 }
                 if (options.showClear) {
-                    row.push($('<td>').append($('<a>').attr({ 'data-action': 'clear', 'title': options.tooltips.clear }).append($('<span>').addClass(options.icons.clear))));
+                    row.push($('<td>').append($('<a>').attr({'data-action':'clear', 'title': options.tooltips.clear}).append($('<span>').addClass(options.icons.clear))));
                 }
                 if (options.showClose) {
-                    row.push($('<td>').append($('<a>').attr({ 'data-action': 'close', 'title': options.tooltips.close }).append($('<span>').addClass(options.icons.close))));
+                    row.push($('<td>').append($('<a>').attr({'data-action':'close', 'title': options.tooltips.close}).append($('<span>').addClass(options.icons.close))));
                 }
                 return $('<table>').addClass('table-condensed').append($('<tbody>').append($('<tr>').append(row)));
             },
@@ -8690,7 +8667,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
                 widget.css({
                     top: vertical === 'top' ? 'auto' : position.top + element.outerHeight(),
-                    bottom: vertical === 'top' ? parent.outerHeight() - (parent === element ? 0 : position.top) : 'auto',
+                    bottom: vertical === 'top' ? position.top + element.outerHeight() : 'auto',
                     left: horizontal === 'left' ? (parent === element ? 0 : position.left) : 'auto',
                     right: horizontal === 'left' ? 'auto' : parent.outerWidth() - element.outerWidth() - (parent === element ? 0 : position.left)
                 });
@@ -8845,9 +8822,9 @@ return /******/ (function(modules) { // webpackBootstrap
                     endYear = viewDate.clone().add(6, 'y'),
                     html = '';
 
-                yearsViewHeader.eq(0).find('span').attr('title', options.tooltips.prevDecade);
+                yearsViewHeader.eq(0).find('span').attr('title', options.tooltips.nextDecade);
                 yearsViewHeader.eq(1).attr('title', options.tooltips.selectDecade);
-                yearsViewHeader.eq(2).find('span').attr('title', options.tooltips.nextDecade);
+                yearsViewHeader.eq(2).find('span').attr('title', options.tooltips.prevDecade);
 
                 yearsView.find('.disabled').removeClass('disabled');
 
@@ -8872,12 +8849,8 @@ return /******/ (function(modules) { // webpackBootstrap
             updateDecades = function () {
                 var decadesView = widget.find('.datepicker-decades'),
                     decadesViewHeader = decadesView.find('th'),
-                    startDecade = moment({ y: viewDate.year() - (viewDate.year() % 100) - 1 }),
+                    startDecade = viewDate.isBefore(moment({y: 1999})) ? moment({y: 1899}) : moment({y: 1999}),
                     endDecade = startDecade.clone().add(100, 'y'),
-                    startedAt = startDecade.clone(),
-                    minDateDecade = false,
-                    maxDateDecade = false,
-                    endDecadeYear,
                     html = '';
 
                 decadesViewHeader.eq(0).find('span').attr('title', options.tooltips.prevCentury);
@@ -8885,28 +8858,24 @@ return /******/ (function(modules) { // webpackBootstrap
 
                 decadesView.find('.disabled').removeClass('disabled');
 
-                if (startDecade.isSame(moment({ y: 1900 })) || (options.minDate && options.minDate.isAfter(startDecade, 'y'))) {
+                if (startDecade.isSame(moment({y: 1900})) || (options.minDate && options.minDate.isAfter(startDecade, 'y'))) {
                     decadesViewHeader.eq(0).addClass('disabled');
                 }
 
                 decadesViewHeader.eq(1).text(startDecade.year() + '-' + endDecade.year());
 
-                if (startDecade.isSame(moment({ y: 2000 })) || (options.maxDate && options.maxDate.isBefore(endDecade, 'y'))) {
+                if (startDecade.isSame(moment({y: 2000})) || (options.maxDate && options.maxDate.isBefore(endDecade, 'y'))) {
                     decadesViewHeader.eq(2).addClass('disabled');
                 }
 
                 while (!startDecade.isAfter(endDecade, 'y')) {
-                    endDecadeYear = startDecade.year() + 12;
-                    minDateDecade = options.minDate && options.minDate.isAfter(startDecade, 'y') && options.minDate.year() <= endDecadeYear;
-                    maxDateDecade = options.maxDate && options.maxDate.isAfter(startDecade, 'y') && options.maxDate.year() <= endDecadeYear;
-                    html += '<span data-action="selectDecade" class="decade' + (date.isAfter(startDecade) && date.year() <= endDecadeYear ? ' active' : '') +
-                        (!isValid(startDecade, 'y') && !minDateDecade && !maxDateDecade ? ' disabled' : '') + '" data-selection="' + (startDecade.year() + 6) + '">' + (startDecade.year() + 1) + ' - ' + (startDecade.year() + 12) + '</span>';
+                    html += '<span data-action="selectDecade" class="decade' + (startDecade.isSame(date, 'y') ? ' active' : '') +
+                        (!isValid(startDecade, 'y') ? ' disabled' : '') + '" data-selection="' + (startDecade.year() + 6) + '">' + (startDecade.year() + 1) + ' - ' + (startDecade.year() + 12) + '</span>';
                     startDecade.add(12, 'y');
                 }
                 html += '<span></span><span></span><span></span>'; //push the dangling block over, at least this way it's even
 
                 decadesView.find('td').html(html);
-                decadesViewHeader.eq(1).text((startedAt.year() + 1) + '-' + (startDecade.year()));
             },
 
             fillDate = function () {
@@ -8959,7 +8928,7 @@ return /******/ (function(modules) { // webpackBootstrap
                     if (!isValid(currentDate, 'd')) {
                         clsName += ' disabled';
                     }
-                    if (currentDate.isSame(getMoment(), 'd')) {
+                    if (currentDate.isSame(moment(), 'd')) {
                         clsName += ' today';
                     }
                     if (currentDate.day() === 0 || currentDate.day() === 6) {
@@ -9085,17 +9054,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
                 targetMoment = targetMoment.clone().locale(options.locale);
 
-                if (hasTimeZone()) {
-                    targetMoment.tz(options.timeZone);
-                }
-
                 if (options.stepping !== 1) {
-                    targetMoment.minutes((Math.round(targetMoment.minutes() / options.stepping) * options.stepping)).seconds(0);
+                    targetMoment.minutes((Math.round(targetMoment.minutes() / options.stepping) * options.stepping) % 60).seconds(0);
                 }
 
                 if (isValid(targetMoment)) {
                     date = targetMoment;
-                    //viewDate = date.clone(); // TODO this doesn't work right on first use
+                    viewDate = date.clone();
                     input.val(date.format(actualFormat));
                     element.data('date', date.format(actualFormat));
                     unset = false;
@@ -9108,25 +9073,16 @@ return /******/ (function(modules) { // webpackBootstrap
                 } else {
                     if (!options.keepInvalid) {
                         input.val(unset ? '' : date.format(actualFormat));
-                    } else {
-                        notifyEvent({
-                            type: 'dp.change',
-                            date: targetMoment,
-                            oldDate: oldDate
-                        });
                     }
                     notifyEvent({
                         type: 'dp.error',
-                        date: targetMoment,
-                        oldDate: oldDate
+                        date: targetMoment
                     });
                 }
             },
 
-            /**
-             * Hides the widget. Possibly will emit dp.hide
-             */
             hide = function () {
+                ///<summary>Hides the widget. Possibly will emit dp.hide</summary>
                 var transitioning = false;
                 if (!widget) {
                     return picker;
@@ -9162,26 +9118,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
                 input.blur();
 
-                currentViewMode = 0;
-                viewDate = date.clone();
-
                 return picker;
             },
 
             clear = function () {
                 setValue(null);
-            },
-
-            parseInputDate = function (inputDate) {
-                if (options.parseInputDate === undefined) {
-                    if (!moment.isMoment(inputDate)) {
-                        inputDate = getMoment(inputDate);
-                    }
-                } else {
-                    inputDate = options.parseInputDate(inputDate);
-                }
-                //inputDate.locale(options.locale);
-                return inputDate;
             },
 
             /********************************************************************************
@@ -9396,9 +9337,8 @@ return /******/ (function(modules) { // webpackBootstrap
                 clear: clear,
 
                 today: function () {
-                    var todaysDate = getMoment();
-                    if (isValid(todaysDate, 'd')) {
-                        setValue(todaysDate);
+                    if (isValid(moment(), 'd')) {
+                        setValue(moment());
                     }
                 },
 
@@ -9413,10 +9353,8 @@ return /******/ (function(modules) { // webpackBootstrap
                 return false;
             },
 
-            /**
-             * Shows the widget. Possibly will emit dp.show and dp.change
-             */
             show = function () {
+                ///<summary>Shows the widget. Possibly will emit dp.show and dp.change</summary>
                 var currentMoment,
                     useCurrentGranularity = {
                         'year': function (m) {
@@ -9441,13 +9379,14 @@ return /******/ (function(modules) { // webpackBootstrap
                 }
                 if (input.val() !== undefined && input.val().trim().length !== 0) {
                     setValue(parseInputDate(input.val().trim()));
-                } else if (unset && options.useCurrent && (options.inline || (input.is('input') && input.val().trim().length === 0))) {
-                    currentMoment = getMoment();
+                } else if (options.useCurrent && unset && ((input.is('input') && input.val().trim().length === 0) || options.inline)) {
+                    currentMoment = moment();
                     if (typeof options.useCurrent === 'string') {
                         currentMoment = useCurrentGranularity[options.useCurrent](currentMoment);
                     }
                     setValue(currentMoment);
                 }
+
                 widget = getTemplate();
 
                 fillDow();
@@ -9467,8 +9406,9 @@ return /******/ (function(modules) { // webpackBootstrap
                 if (component && component.hasClass('btn')) {
                     component.toggleClass('active');
                 }
-                place();
                 widget.show();
+                place();
+
                 if (options.focusOnShow && !input.is(':focus')) {
                     input.focus();
                 }
@@ -9479,11 +9419,23 @@ return /******/ (function(modules) { // webpackBootstrap
                 return picker;
             },
 
-            /**
-             * Shows or hides the widget
-             */
             toggle = function () {
+                /// <summary>Shows or hides the widget</summary>
                 return (widget ? hide() : show());
+            },
+
+            parseInputDate = function (inputDate) {
+                if (options.parseInputDate === undefined) {
+                    if (moment.isMoment(inputDate) || inputDate instanceof Date) {
+                        inputDate = moment(inputDate);
+                    } else {
+                        inputDate = moment(inputDate, parseFormats, options.useStrict);
+                    }
+                } else {
+                    inputDate = options.parseInputDate(inputDate);
+                }
+                inputDate.locale(options.locale);
+                return inputDate;
             },
 
             keydown = function (e) {
@@ -9753,27 +9705,13 @@ return /******/ (function(modules) { // webpackBootstrap
             }
 
             if ((typeof newFormat !== 'string') && ((typeof newFormat !== 'boolean') || (newFormat !== false))) {
-                throw new TypeError('format() expects a string or boolean:false parameter ' + newFormat);
+                throw new TypeError('format() expects a sting or boolean:false parameter ' + newFormat);
             }
 
             options.format = newFormat;
             if (actualFormat) {
                 initFormatting(); // reinit formatting
             }
-            return picker;
-        };
-
-        picker.timeZone = function (newZone) {
-            if (arguments.length === 0) {
-                return options.timeZone;
-            }
-
-            if (typeof newZone !== 'string') {
-                throw new TypeError('newZone() expects a string parameter');
-            }
-
-            options.timeZone = newZone;
-
             return picker;
         };
 
@@ -9889,8 +9827,8 @@ return /******/ (function(modules) { // webpackBootstrap
                 var tries = 0;
                 while (!isValid(date, 'd')) {
                     date.add(1, 'd');
-                    if (tries === 31) {
-                        throw 'Tried 31 times to find a valid date';
+                    if (tries === 7) {
+                        throw 'Tried 7 times to find a valid date';
                     }
                     tries++;
                 }
@@ -9913,7 +9851,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
             if (typeof maxDate === 'string') {
                 if (maxDate === 'now' || maxDate === 'moment') {
-                    maxDate = getMoment();
+                    maxDate = moment();
                 }
             }
 
@@ -9949,7 +9887,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
             if (typeof minDate === 'string') {
                 if (minDate === 'now' || minDate === 'moment') {
-                    minDate = getMoment();
+                    minDate = moment();
                 }
             }
 
@@ -9991,9 +9929,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
             if (typeof defaultDate === 'string') {
                 if (defaultDate === 'now' || defaultDate === 'moment') {
-                    defaultDate = getMoment();
-                } else {
-                    defaultDate = getMoment(defaultDate);
+                    defaultDate = moment();
                 }
             }
 
@@ -10007,7 +9943,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
             options.defaultDate = parsedDate;
 
-            if ((options.defaultDate && options.inline) || input.val().trim() === '') {
+            if (options.defaultDate && options.inline || (input.val().trim() === '' && input.attr('placeholder') === undefined)) {
                 setValue(options.defaultDate);
             }
             return picker;
@@ -10330,16 +10266,8 @@ return /******/ (function(modules) { // webpackBootstrap
         };
 
         picker.keyBinds = function (keyBinds) {
-            if (arguments.length === 0) {
-                return options.keyBinds;
-            }
-
             options.keyBinds = keyBinds;
             return picker;
-        };
-
-        picker.getMoment = function (d) {
-            return getMoment(d);
         };
 
         picker.debug = function (debug) {
@@ -10519,12 +10447,16 @@ return /******/ (function(modules) { // webpackBootstrap
             update();
             return picker;
         };
-        /**
-         * Returns the component's model current viewDate, a moment object or null if not set. Passing a null value unsets the components model current moment. Parsing of the newDate parameter is made using moment library with the options.format and options.useStrict components configuration.
-         * @param {Takes string, viewDate, moment, null parameter.} newDate
-         * @returns {viewDate.clone()}
-         */
+
         picker.viewDate = function (newDate) {
+            ///<signature helpKeyword="$.fn.datetimepicker.viewDate">
+            ///<summary>Returns the component's model current viewDate, a moment object or null if not set.</summary>
+            ///<returns type="Moment">viewDate.clone()</returns>
+            ///</signature>
+            ///<signature>
+            ///<summary>Sets the components model current moment to it. Passing a null value unsets the components model current moment. Parsing of the newDate parameter is made using moment library with the options.format and options.useStrict components configuration.</summary>
+            ///<param name="newDate" locid="$.fn.datetimepicker.date_p:newDate">Takes string, viewDate, moment, null parameter.</param>
+            ///</signature>
             if (arguments.length === 0) {
                 return viewDate.clone();
             }
@@ -10548,7 +10480,7 @@ return /******/ (function(modules) { // webpackBootstrap
             input = element;
         } else {
             input = element.find(options.datepickerInput);
-            if (input.length === 0) {
+            if (input.size() === 0) {
                 input = element.find('input');
             } else if (!input.is('input')) {
                 throw new Error('CSS class "' + options.datepickerInput + '" cannot be applied to non input element');
@@ -10557,7 +10489,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
         if (element.hasClass('input-group')) {
             // in case there is more then one 'input-group-addon' Issue #48
-            if (element.find('.datepickerbutton').length === 0) {
+            if (element.find('.datepickerbutton').size() === 0) {
                 component = element.find('.input-group-addon');
             } else {
                 component = element.find('.datepickerbutton');
@@ -10567,10 +10499,6 @@ return /******/ (function(modules) { // webpackBootstrap
         if (!options.inline && !input.is('input')) {
             throw new Error('Could not initialize DateTimePicker without an input element');
         }
-
-        // Set defaults for date here now instead of in var declaration
-        date = getMoment();
-        viewDate = date.clone();
 
         $.extend(true, options, dataToOptions());
 
@@ -10601,67 +10529,18 @@ return /******/ (function(modules) { // webpackBootstrap
      *
      ********************************************************************************/
 
-    /**
-    * See (http://jquery.com/).
-    * @name jQuery
-    * @class
-    * See the jQuery Library  (http://jquery.com/) for full details.  This just
-    * documents the function and classes that are added to jQuery by this plug-in.
-    */
-    /**
-     * See (http://jquery.com/)
-     * @name fn
-     * @class
-     * See the jQuery Library  (http://jquery.com/) for full details.  This just
-     * documents the function and classes that are added to jQuery by this plug-in.
-     * @memberOf jQuery
-     */
-    /**
-     * Show comments
-     * @class datetimepicker
-     * @memberOf jQuery.fn
-     */
     $.fn.datetimepicker = function (options) {
-        options = options || {};
-
-        var args = Array.prototype.slice.call(arguments, 1),
-            isInstance = true,
-            thisMethods = ['destroy', 'hide', 'show', 'toggle'],
-            returnValue;
-
-        if (typeof options === 'object') {
-            return this.each(function () {
-                var $this = $(this);
-                if (!$this.data('DateTimePicker')) {
-                    // create a private copy of the defaults object
-                    options = $.extend(true, {}, $.fn.datetimepicker.defaults, options);
-                    $this.data('DateTimePicker', dateTimePicker($this, options));
-                }
-            });
-        } else if (typeof options === 'string') {
-            this.each(function () {
-                var $this = $(this),
-                    instance = $this.data('DateTimePicker');
-                if (!instance) {
-                    throw new Error('bootstrap-datetimepicker("' + options + '") method was called on an element that is not using DateTimePicker');
-                }
-
-                returnValue = instance[options].apply(instance, args);
-                isInstance = returnValue === instance;
-            });
-
-            if (isInstance || $.inArray(options, thisMethods) > -1) {
-                return this;
+        return this.each(function () {
+            var $this = $(this);
+            if (!$this.data('DateTimePicker')) {
+                // create a private copy of the defaults object
+                options = $.extend(true, {}, $.fn.datetimepicker.defaults, options);
+                $this.data('DateTimePicker', dateTimePicker($this, options));
             }
-
-            return returnValue;
-        }
-
-        throw new TypeError('Invalid arguments for DateTimePicker: ' + options);
+        });
     };
 
     $.fn.datetimepicker.defaults = {
-        timeZone: '',
         format: false,
         dayViewHeaderFormat: 'MMMM YYYY',
         extraFormats: false,
@@ -10699,18 +10578,7 @@ return /******/ (function(modules) { // webpackBootstrap
             prevDecade: 'Previous Decade',
             nextDecade: 'Next Decade',
             prevCentury: 'Previous Century',
-            nextCentury: 'Next Century',
-            pickHour: 'Pick Hour',
-            incrementHour: 'Increment Hour',
-            decrementHour: 'Decrement Hour',
-            pickMinute: 'Pick Minute',
-            incrementMinute: 'Increment Minute',
-            decrementMinute: 'Decrement Minute',
-            pickSecond: 'Pick Second',
-            incrementSecond: 'Increment Second',
-            decrementSecond: 'Decrement Second',
-            togglePeriod: 'Toggle Period',
-            selectTime: 'Select Time'
+            nextCentury: 'Next Century'
         },
         useStrict: false,
         sideBySide: false,
@@ -10737,7 +10605,7 @@ return /******/ (function(modules) { // webpackBootstrap
                 if (!widget) {
                     return;
                 }
-                var d = this.date() || this.getMoment();
+                var d = this.date() || moment();
                 if (widget.find('.datepicker').is(':visible')) {
                     this.date(d.clone().subtract(7, 'd'));
                 } else {
@@ -10749,7 +10617,7 @@ return /******/ (function(modules) { // webpackBootstrap
                     this.show();
                     return;
                 }
-                var d = this.date() || this.getMoment();
+                var d = this.date() || moment();
                 if (widget.find('.datepicker').is(':visible')) {
                     this.date(d.clone().add(7, 'd'));
                 } else {
@@ -10760,7 +10628,7 @@ return /******/ (function(modules) { // webpackBootstrap
                 if (!widget) {
                     return;
                 }
-                var d = this.date() || this.getMoment();
+                var d = this.date() || moment();
                 if (widget.find('.datepicker').is(':visible')) {
                     this.date(d.clone().subtract(1, 'y'));
                 } else {
@@ -10771,7 +10639,7 @@ return /******/ (function(modules) { // webpackBootstrap
                 if (!widget) {
                     return;
                 }
-                var d = this.date() || this.getMoment();
+                var d = this.date() || moment();
                 if (widget.find('.datepicker').is(':visible')) {
                     this.date(d.clone().add(1, 'y'));
                 } else {
@@ -10782,7 +10650,7 @@ return /******/ (function(modules) { // webpackBootstrap
                 if (!widget) {
                     return;
                 }
-                var d = this.date() || this.getMoment();
+                var d = this.date() || moment();
                 if (widget.find('.datepicker').is(':visible')) {
                     this.date(d.clone().subtract(1, 'd'));
                 }
@@ -10791,7 +10659,7 @@ return /******/ (function(modules) { // webpackBootstrap
                 if (!widget) {
                     return;
                 }
-                var d = this.date() || this.getMoment();
+                var d = this.date() || moment();
                 if (widget.find('.datepicker').is(':visible')) {
                     this.date(d.clone().add(1, 'd'));
                 }
@@ -10800,7 +10668,7 @@ return /******/ (function(modules) { // webpackBootstrap
                 if (!widget) {
                     return;
                 }
-                var d = this.date() || this.getMoment();
+                var d = this.date() || moment();
                 if (widget.find('.datepicker').is(':visible')) {
                     this.date(d.clone().subtract(1, 'M'));
                 }
@@ -10809,7 +10677,7 @@ return /******/ (function(modules) { // webpackBootstrap
                 if (!widget) {
                     return;
                 }
-                var d = this.date() || this.getMoment();
+                var d = this.date() || moment();
                 if (widget.find('.datepicker').is(':visible')) {
                     this.date(d.clone().add(1, 'M'));
                 }
@@ -10825,15 +10693,12 @@ return /******/ (function(modules) { // webpackBootstrap
             //    if(toggle.length > 0) toggle.click();
             //},
             'control space': function (widget) {
-                if (!widget) {
-                    return;
-                }
                 if (widget.find('.timepicker').is(':visible')) {
                     widget.find('.btn[data-action="togglePeriod"]').click();
                 }
             },
             t: function () {
-                this.date(this.getMoment());
+                this.date(moment());
             },
             'delete': function () {
                 this.clear();
@@ -10846,20 +10711,17 @@ return /******/ (function(modules) { // webpackBootstrap
         enabledHours: false,
         viewDate: false
     };
-    if (typeof module !== 'undefined') {
-        module.exports = $.fn.datetimepicker;
-    }
 }));
 
 /**
- * Super simple wysiwyg editor v0.8.2
+ * Super simple wysiwyg editor v0.8.1
  * http://summernote.org/
  *
  * summernote.js
- * Copyright 2013-2016 Alan Hong. and other contributors
+ * Copyright 2013-2015 Alan Hong. and other contributors
  * summernote may be freely distributed under the MIT license./
  *
- * Date: 2016-08-07T05:11Z
+ * Date: 2016-02-15T18:35Z
  */
 (function (factory) {
   /* global define */
@@ -10993,35 +10855,6 @@ return /******/ (function(modules) { // webpackBootstrap
       }).join('');
     };
 
-    /**
-     * Returns a function, that, as long as it continues to be invoked, will not
-     * be triggered. The function will be called after it stops being called for
-     * N milliseconds. If `immediate` is passed, trigger the function on the
-     * leading edge, instead of the trailing.
-     * @param {Function} func
-     * @param {Number} wait
-     * @param {Boolean} immediate
-     * @return {Function}
-     */
-    var debounce = function (func, wait, immediate) {
-      var timeout;
-      return function () {
-        var context = this, args = arguments;
-        var later = function () {
-          timeout = null;
-          if (!immediate) {
-            func.apply(context, args);
-          }
-        };
-        var callNow = immediate && !timeout;
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-        if (callNow) {
-          func.apply(context, args);
-        }
-      };
-    };
-
     return {
       eq: eq,
       eq2: eq2,
@@ -11035,8 +10868,7 @@ return /******/ (function(modules) { // webpackBootstrap
       uniqueId: uniqueId,
       rect2bnd: rect2bnd,
       invertObject: invertObject,
-      namespaceToCamel: namespaceToCamel,
-      debounce: debounce
+      namespaceToCamel: namespaceToCamel
     };
   })();
 
@@ -11177,7 +11009,7 @@ return /******/ (function(modules) { // webpackBootstrap
     };
   
     /**
-     * returns a copy of the array with all false values removed
+     * returns a copy of the array with all falsy values removed
      *
      * @param {Array} array - array
      * @param {Function} fn - predicate function for cluster rule
@@ -11277,18 +11109,18 @@ return /******/ (function(modules) { // webpackBootstrap
   var isEdge = /Edge\/\d+/.test(userAgent);
 
   var hasCodeMirror = !!window.CodeMirror;
-  if (!hasCodeMirror && isSupportAmd && typeof require !== 'undefined') {
-    if (typeof require.resolve !== 'undefined') {
+  if (!hasCodeMirror && isSupportAmd && require) {
+    if (require.hasOwnProperty('resolve')) {
       try {
         // If CodeMirror can't be resolved, `require.resolve` will throw an
         // exception and `hasCodeMirror` won't be set to `true`.
         require.resolve('codemirror');
         hasCodeMirror = true;
       } catch (e) {
-        // Do nothing.
+        hasCodeMirror = false;
       }
-    } else if (typeof eval('require').specified !== 'undefined') {
-      hasCodeMirror = eval('require').specified('codemirror');
+    } else if (require.hasOwnProperty('specified')) {
+      hasCodeMirror = require.specified('codemirror');
     }
   }
 
@@ -11424,16 +11256,13 @@ return /******/ (function(modules) { // webpackBootstrap
 
     var isTable = makePredByNodeName('TABLE');
 
-    var isData = makePredByNodeName('DATA');
-
     var isInline = function (node) {
       return !isBodyContainer(node) &&
              !isList(node) &&
              !isHr(node) &&
              !isPara(node) &&
              !isTable(node) &&
-             !isBlockquote(node) &&
-             !isData(node);
+             !isBlockquote(node);
     };
 
     var isList = function (node) {
@@ -11515,13 +11344,8 @@ return /******/ (function(modules) { // webpackBootstrap
       if (isText(node)) {
         return node.nodeValue.length;
       }
-      
-      if (node) {
-        return node.childNodes.length;
-      }
-      
-      return 0;
-      
+
+      return node.childNodes.length;
     };
 
     /**
@@ -11793,9 +11617,6 @@ return /******/ (function(modules) { // webpackBootstrap
      * @return {Boolean}
      */
     var isRightEdgeOf = function (node, ancestor) {
-      if (!ancestor) {
-        return false;
-      }
       while (node && node !== ancestor) {
         if (position(node) !== nodeLength(node.parentNode) - 1) {
           return false;
@@ -11918,7 +11739,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
     /**
      * returns whether point is visible (can set cursor) or not.
-     *
+     * 
      * @param {BoundaryPoint} point
      * @return {Boolean}
      */
@@ -12334,7 +12155,6 @@ return /******/ (function(modules) { // webpackBootstrap
       isPre: isPre,
       isList: isList,
       isTable: isTable,
-      isData: isData,
       isCell: isCell,
       isBlockquote: isBlockquote,
       isBodyContainer: isBodyContainer,
@@ -12625,7 +12445,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
       options = $.extend({}, $.summernote.options, options);
       options.langInfo = $.extend(true, {}, $.summernote.lang['en-US'], $.summernote.lang[options.lang]);
-      options.icons = $.extend(true, {}, $.summernote.options.icons, options.icons);
 
       this.each(function (idx, note) {
         var $note = $(note);
@@ -12728,7 +12547,7 @@ return /******/ (function(modules) { // webpackBootstrap
   var airEditable = renderer.create('<div class="note-editable" contentEditable="true"/>');
 
   var buttonGroup = renderer.create('<div class="note-btn-group btn-group">');
-  var button = renderer.create('<button type="button" class="note-btn btn btn-default btn-sm" tabindex="-1">', function ($node, options) {
+  var button = renderer.create('<button type="button" class="note-btn btn btn-default btn-sm">', function ($node, options) {
     if (options && options.tooltip) {
       $node.attr({
         title: options.tooltip
@@ -13580,10 +13399,8 @@ return /******/ (function(modules) { // webpackBootstrap
       this.isOnList = makeIsOn(dom.isList);
       // isOnAnchor: judge whether range is on anchor node or not
       this.isOnAnchor = makeIsOn(dom.isAnchor);
-      // isOnCell: judge whether range is on cell node or not
+      // isOnAnchor: judge whether range is on cell node or not
       this.isOnCell = makeIsOn(dom.isCell);
-      // isOnData: judge whether range is on data node or not
-      this.isOnData = makeIsOn(dom.isData);
 
       /**
        * @param {Function} pred
@@ -14642,12 +14459,8 @@ return /******/ (function(modules) { // webpackBootstrap
         }
         context.triggerEvent('keydown', event);
 
-        if (!event.isDefaultPrevented()) {
-          if (options.shortcuts) {
-            self.handleKeyMap(event);
-          } else {
-            self.preventDefaultEditableShortCuts(event);
-          }
+        if (options.shortcuts && !event.isDefaultPrevented()) {
+          self.handleKeyMap(event);
         }
       }).on('keyup', function (event) {
         context.triggerEvent('keyup', event);
@@ -14671,9 +14484,9 @@ return /******/ (function(modules) { // webpackBootstrap
       // [workaround] IE doesn't have input events for contentEditable
       // - see: https://goo.gl/4bfIvA
       var changeEventName = agent.isMSIE ? 'DOMCharacterDataModified DOMSubtreeModified DOMNodeInserted' : 'input';
-      $editable.on(changeEventName, func.debounce(function () {
+      $editable.on(changeEventName, function () {
         context.triggerEvent('change', $editable.html());
-      }, 250));
+      });
 
       $editor.on('focusin', function (event) {
         context.triggerEvent('focusin', event);
@@ -14681,19 +14494,14 @@ return /******/ (function(modules) { // webpackBootstrap
         context.triggerEvent('focusout', event);
       });
 
-      if (!options.airMode) {
-        if (options.width) {
-          $editor.outerWidth(options.width);
-        }
-        if (options.height) {
-          $editable.outerHeight(options.height);
-        }
-        if (options.maxHeight) {
-          $editable.css('max-height', options.maxHeight);
-        }
-        if (options.minHeight) {
-          $editable.css('min-height', options.minHeight);
-        }
+      if (!options.airMode && options.height) {
+        this.setHeight(options.height);
+      }
+      if (!options.airMode && options.maxHeight) {
+        $editable.css('max-height', options.maxHeight);
+      }
+      if (!options.airMode && options.minHeight) {
+        $editable.css('min-height', options.minHeight);
       }
 
       history.recordUndo();
@@ -14722,14 +14530,6 @@ return /******/ (function(modules) { // webpackBootstrap
         context.invoke(eventName);
       } else if (key.isEdit(event.keyCode)) {
         this.afterCommand();
-      }
-    };
-
-    this.preventDefaultEditableShortCuts = function (event) {
-      // B(Bold, 66) / I(Italic, 73) / U(Underline, 85)
-      if ((event.ctrlKey || event.metaKey) &&
-        list.contains([66, 73, 85], event.keyCode)) {
-        event.preventDefault();
       }
     };
 
@@ -15170,11 +14970,6 @@ return /******/ (function(modules) { // webpackBootstrap
       var rng = linkInfo.range || this.createRange();
       var isTextChanged = rng.toString() !== linkText;
 
-      // handle spaced urls from input
-      if (typeof linkUrl === 'string') {
-        linkUrl = linkUrl.trim();
-      }
-
       if (options.onCreateLink) {
         linkUrl = options.onCreateLink(linkUrl);
       }
@@ -15193,10 +14988,6 @@ return /******/ (function(modules) { // webpackBootstrap
       }
 
       $.each(anchors, function (idx, anchor) {
-        // if url doesn't match an URL schema, set http:// as default
-        linkUrl = /^[A-Za-z][A-Za-z0-9+-.]*\:[\/\/]?/.test(linkUrl) ?
-          linkUrl : 'http://' + linkUrl;
-
         $(anchor).attr('href', linkUrl);
         if (isNewWindow) {
           $(anchor).attr('target', '_blank');
@@ -15354,6 +15145,13 @@ return /******/ (function(modules) { // webpackBootstrap
     this.empty = function () {
       context.invoke('code', dom.emptyPara);
     };
+
+    /**
+     * set height for editable
+     */
+    this.setHeight = function (height) {
+      $editable.outerHeight(height);
+    };
   };
 
   var Clipboard = function (context) {
@@ -15385,7 +15183,7 @@ return /******/ (function(modules) { // webpackBootstrap
       //  - IE11 and Firefox: CTRL+v hook
       //  - Webkit: event.clipboardData
       if (this.needKeydownHook()) {
-        this.$paste = $('<div tabindex="-1" />').attr('contenteditable', true).css({
+        this.$paste = $('<div />').attr('contenteditable', true).css({
           position: 'absolute',
           left: -100000,
           opacity: 0
@@ -15460,7 +15258,6 @@ return /******/ (function(modules) { // webpackBootstrap
     var $editable = context.layoutInfo.editable;
     var options = context.options;
     var lang = options.langInfo;
-    var documentEventHandlers = {};
 
     var $dropzone = $([
       '<div class="note-dropzone">',
@@ -15468,23 +15265,15 @@ return /******/ (function(modules) { // webpackBootstrap
       '</div>'
     ].join('')).prependTo($editor);
 
-    var detachDocumentEvent = function () {
-      Object.keys(documentEventHandlers).forEach(function (key) {
-        $document.off(key.substr(2).toLowerCase(), documentEventHandlers[key]);
-      });
-      documentEventHandlers = {};
-    };
-
     /**
      * attach Drag and Drop Events
      */
     this.initialize = function () {
       if (options.disableDragAndDrop) {
         // prevent default drop event
-        documentEventHandlers.onDrop = function (e) {
+        $document.on('drop', function (e) {
           e.preventDefault();
-        };
-        $document.on('drop', documentEventHandlers.onDrop);
+        });
       } else {
         this.attachDragAndDropEvent();
       }
@@ -15497,7 +15286,9 @@ return /******/ (function(modules) { // webpackBootstrap
       var collection = $(),
           $dropzoneMessage = $dropzone.find('.note-dropzone-message');
 
-      documentEventHandlers.onDragenter = function (e) {
+      // show dropzone on dragenter when dragging a object to document
+      // -but only if the editor is visible, i.e. has a positive width and height
+      $document.on('dragenter', function (e) {
         var isCodeview = context.invoke('codeview.isActivated');
         var hasEditorSize = $editor.width() > 0 && $editor.height() > 0;
         if (!isCodeview && !collection.length && hasEditorSize) {
@@ -15507,25 +15298,15 @@ return /******/ (function(modules) { // webpackBootstrap
           $dropzoneMessage.text(lang.image.dragImageHere);
         }
         collection = collection.add(e.target);
-      };
-
-      documentEventHandlers.onDragleave = function (e) {
+      }).on('dragleave', function (e) {
         collection = collection.not(e.target);
         if (!collection.length) {
           $editor.removeClass('dragover');
         }
-      };
-
-      documentEventHandlers.onDrop = function () {
+      }).on('drop', function () {
         collection = $();
         $editor.removeClass('dragover');
-      };
-
-      // show dropzone on dragenter when dragging a object to document
-      // -but only if the editor is visible, i.e. has a positive width and height
-      $document.on('dragenter', documentEventHandlers.onDragenter)
-        .on('dragleave', documentEventHandlers.onDragleave)
-        .on('drop', documentEventHandlers.onDrop);
+      });
 
       // change dropzone's message on hover.
       $dropzone.on('dragenter', function () {
@@ -15558,10 +15339,6 @@ return /******/ (function(modules) { // webpackBootstrap
           });
         }
       }).on('dragover', false); // prevent default dragover event
-    };
-
-    this.destroy = function () {
-      detachDocumentEvent();
     };
   };
 
@@ -15710,7 +15487,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
     this.destroy = function () {
       $statusbar.off();
-      $statusbar.remove();
     };
   };
 
@@ -15877,7 +15653,7 @@ return /******/ (function(modules) { // webpackBootstrap
   var AutoLink = function (context) {
     var self = this;
     var defaultScheme = 'http://';
-    var linkPattern = /^([A-Za-z][A-Za-z0-9+-.]*\:[\/\/]?|mailto:[A-Z0-9._%+-]+@)?(www\.)?(.+)$/i;
+    var linkPattern = /^(https?:\/\/|ssh:\/\/|ftp:\/\/|file:\/|mailto:[A-Z0-9._%+-]+@)?(www\.)?(.+)$/i;
 
     this.events = {
       'summernote.keyup': function (we, e) {
@@ -15995,10 +15771,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
     var representShortcut = this.representShortcut = function (editorMethod) {
       var shortcut = invertedKeyMap[editorMethod];
-      if (!options.shortcuts || !shortcut) {
-        return '';
-      }
-      
       if (agent.isMac) {
         shortcut = shortcut.replace('CMD', '⌘').replace('SHIFT', '⇧');
       }
@@ -16048,13 +15820,13 @@ return /******/ (function(modules) { // webpackBootstrap
             template: function (item) {
 
               if (typeof item === 'string') {
-                item = { tag: item, title: (lang.style.hasOwnProperty(item) ? lang.style[item] : item) };
+                item = { tag: item, title: item };
               }
 
               var tag = item.tag;
               var title = item.title;
               var style = item.style ? ' style="' + item.style + '" ' : '';
-              var className = item.className ? ' class="' + item.className + '"' : '';
+              var className = item.className ? ' className="' + item.className + '"' : '';
 
               return '<' + tag + style + className + '>' + title + '</' + tag +  '>';
             },
@@ -16384,7 +16156,7 @@ return /******/ (function(modules) { // webpackBootstrap
       context.memo('button.link', function () {
         return ui.button({
           contents: ui.icon(options.icons.link),
-          tooltip: lang.link.link + representShortcut('linkDialog.show'),
+          tooltip: lang.link.link,
           click: context.createInvokeHandler('linkDialog.show')
         }).render();
       });
@@ -16782,13 +16554,6 @@ return /******/ (function(modules) { // webpackBootstrap
     };
 
     /**
-     * toggle update button
-     */
-    this.toggleLinkBtn = function ($linkBtn, $linkText, $linkUrl) {
-      ui.toggleBtn($linkBtn, $linkText.val() && $linkUrl.val());
-    };
-
-    /**
      * Show link dialog and set event handlers on dialog controls.
      *
      * @param {Object} linkInfo
@@ -16804,38 +16569,30 @@ return /******/ (function(modules) { // webpackBootstrap
         ui.onDialogShown(self.$dialog, function () {
           context.triggerEvent('dialog.shown');
 
-          // if no url was given, copy text to url
-          if (!linkInfo.url) {
-            linkInfo.url = linkInfo.text;
-          }
-
           $linkText.val(linkInfo.text);
 
-          var handleLinkTextUpdate = function () {
-            self.toggleLinkBtn($linkBtn, $linkText, $linkUrl);
+          $linkText.on('input', function () {
+            ui.toggleBtn($linkBtn, $linkText.val() && $linkUrl.val());
             // if linktext was modified by keyup,
             // stop cloning text from linkUrl
             linkInfo.text = $linkText.val();
-          };
-
-          $linkText.on('input', handleLinkTextUpdate).on('paste', function () {
-            setTimeout(handleLinkTextUpdate, 0);
           });
 
-          var handleLinkUrlUpdate = function () {
-            self.toggleLinkBtn($linkBtn, $linkText, $linkUrl);
+          // if no url was given, copy text to url
+          if (!linkInfo.url) {
+            linkInfo.url = linkInfo.text || 'http://';
+            ui.toggleBtn($linkBtn, linkInfo.text);
+          }
+
+          $linkUrl.on('input', function () {
+            ui.toggleBtn($linkBtn, $linkText.val() && $linkUrl.val());
             // display same link on `Text to display` input
             // when create a new link
             if (!linkInfo.text) {
               $linkText.val($linkUrl.val());
             }
-          };
-
-          $linkUrl.on('input', handleLinkUrlUpdate).on('paste', function () {
-            setTimeout(handleLinkUrlUpdate, 0);
           }).val(linkInfo.url).trigger('focus');
 
-          self.toggleLinkBtn($linkBtn, $linkText, $linkUrl);
           self.bindEnterKey($linkUrl, $linkBtn);
           self.bindEnterKey($linkText, $linkBtn);
 
@@ -16856,8 +16613,8 @@ return /******/ (function(modules) { // webpackBootstrap
 
         ui.onDialogHidden(self.$dialog, function () {
           // detach events
-          $linkText.off('input paste keypress');
-          $linkUrl.off('input paste keypress');
+          $linkText.off('input keypress');
+          $linkUrl.off('input keypress');
           $linkBtn.off('click');
 
           if (deferred.state() === 'pending') {
@@ -16975,7 +16732,7 @@ return /******/ (function(modules) { // webpackBootstrap
                    '<input class="note-image-input form-control" type="file" name="files" accept="image/*" multiple="multiple" />' +
                    imageLimitation +
                  '</div>' +
-                 '<div class="form-group note-group-image-url" style="overflow:auto;">' +
+                 '<div class="form-group" style="overflow:auto;">' +
                    '<label>' + lang.image.url + '</label>' +
                    '<input class="note-image-url form-control col-md-12" type="text" />' +
                  '</div>';
@@ -17153,13 +16910,13 @@ return /******/ (function(modules) { // webpackBootstrap
       var ytRegExp = /^(?:https?:\/\/)?(?:www\.)?(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))((\w|-){11})(?:\S+)?$/;
       var ytMatch = url.match(ytRegExp);
 
-      var igRegExp = /(?:www\.|\/\/)instagram\.com\/p\/(.[a-zA-Z0-9_-]*)/;
+      var igRegExp = /\/\/instagram.com\/p\/(.[a-zA-Z0-9_-]*)/;
       var igMatch = url.match(igRegExp);
 
-      var vRegExp = /\/\/vine\.co\/v\/([a-zA-Z0-9]+)/;
+      var vRegExp = /\/\/vine.co\/v\/(.[a-zA-Z0-9]*)/;
       var vMatch = url.match(vRegExp);
 
-      var vimRegExp = /\/\/(player\.)?vimeo\.com\/([a-z]*\/)*([0-9]{6,11})[?]?.*/;
+      var vimRegExp = /\/\/(player.)?vimeo.com\/([a-z]*\/)*([0-9]{6,11})[?]?.*/;
       var vimMatch = url.match(vimRegExp);
 
       var dmRegExp = /.+dailymotion.com\/(video|hub)\/([^_]+)[^#]*(#video=([^_&]+))?/;
@@ -17187,7 +16944,7 @@ return /******/ (function(modules) { // webpackBootstrap
       } else if (igMatch && igMatch[0].length) {
         $video = $('<iframe>')
             .attr('frameborder', 0)
-            .attr('src', 'https://instagram.com/p/' + igMatch[1] + '/embed/')
+            .attr('src', igMatch[0] + '/embed/')
             .attr('width', '612').attr('height', '710')
             .attr('scrolling', 'no')
             .attr('allowtransparency', 'true');
@@ -17314,9 +17071,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
       var body = [
         '<p class="text-center">',
-        '<a href="http://summernote.org/" target="_blank">Summernote 0.8.2</a> · ',
-        '<a href="https://github.com/summernote/summernote" target="_blank">Project</a> · ',
-        '<a href="https://github.com/summernote/summernote/issues" target="_blank">Issues</a>',
+        '<a href="//summernote.org/" target="_blank">Summernote 0.8.1</a> · ',
+        '<a href="//github.com/summernote/summernote" target="_blank">Project</a> · ',
+        '<a href="//github.com/summernote/summernote/issues" target="_blank">Issues</a>',
         '</p>'
       ].join('');
 
@@ -17659,9 +17416,8 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
   $.summernote = $.extend($.summernote, {
-    version: '0.8.2',
+    version: '0.8.1',
     ui: ui,
-    dom: dom,
 
     plugins: {},
 
@@ -17782,6 +17538,7 @@ return /******/ (function(modules) { // webpackBootstrap
         onEnter: null,
         onKeyup: null,
         onKeydown: null,
+        onSubmit: null,
         onImageUpload: null,
         onImageUploadError: null
       },

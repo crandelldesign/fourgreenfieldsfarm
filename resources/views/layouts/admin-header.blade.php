@@ -2,7 +2,7 @@
 <header class="main-header">
 
     <!-- Logo -->
-    <a href="{{url('/')}}/admin" class="logo">CLC Admin</a>
+    <a href="{{url('/')}}/admin" class="logo">Four Green Fields Farm Admin</a>
 
     <!-- Header Navbar -->
     <nav class="navbar navbar-static-top" role="navigation">

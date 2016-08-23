@@ -1,4 +1,4 @@
-<title>{{isset($title) ? $title.' | ' : ''}}Christ Lutheran Church of Waterford Admin</title>
+<title>{{isset($title) ? $title.' | ' : ''}}Four Green Fields Farm Admin</title>
 <meta name="description" content="{{isset($description) ? $description : ''}}">
 
 <meta name="viewport" content="width=device-width, initial-scale=1">

@@ -10,7 +10,7 @@
 
             <header class="style-header">
                 <div class="logo-container">
-                    <img src="{{url('/img/four-green-fields-farm-logo.svg')}}" alt="Four Gren Fields Farm">
+                    <img src="{{url('/img/four-green-fields-farm-logo.svg')}}" alt="Four Gren Fields Farm" class="img-responsive">
                 </div>
             </header>
 
