@@ -101,6 +101,14 @@ a {
         text-decoration: none;
     }
 }
+.btn-camarone {
+    background-color: $camarone;
+    color: #FFF;
+    &:hover {
+        background-color: $greenhaze;
+        color: #FFF;
+    }
+}
 .btn-lynch {
     background-color: $lynch;
     color: #FFF;

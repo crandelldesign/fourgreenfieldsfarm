@@ -7910,9 +7910,11 @@ body {
   /* Margin bottom by footer height */
   margin-bottom: 95px;
   font-family: 'Lato', sans-serif;
-  color: #252525;
-  background: url("/img/background.jpg") no-repeat center center fixed;
-  background-size: cover; }
+  color: #252525; }
+  @media (min-width: 992px) {
+    body {
+      background: url("/img/background.jpg") no-repeat center center fixed;
+      background-size: cover; } }
   @media (min-width: 992px) {
     body {
       font-size: 16px; } }
@@ -7982,6 +7984,13 @@ h3 {
 a.hover {
   color: #91a2b6;
   text-decoration: none; }
+
+.btn-camarone {
+  background-color: #005a2c;
+  color: #FFF; }
+  .btn-camarone:hover {
+    background-color: #00a751;
+    color: #FFF; }
 
 .btn-lynch {
   background-color: #647b97;

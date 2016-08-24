@@ -5,7 +5,7 @@
         @include('layouts.admin-head')
     </head>
     <body>
-        <body class="skin-blue">
+        <body class="skin-green">
         <div class="wrapper">
             @include('layouts.admin-header')
             @include('layouts.admin-sidebar')
