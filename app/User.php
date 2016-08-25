@@ -1,6 +1,6 @@
 <?php
 
-namespace christwaterford;
+namespace fourgreenfieldsfarm;
 
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;

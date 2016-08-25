@@ -43,6 +43,7 @@ class CreateTables extends Migration
             $table->boolean('is_all_day');
             $table->boolean('is_active')->default(true);
             $table->integer('user_id');
+            $table->string('haunted_by')->nullable();
         });
 
         Schema::create('cache', function($table) {
