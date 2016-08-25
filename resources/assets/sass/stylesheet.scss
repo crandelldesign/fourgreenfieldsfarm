@@ -95,10 +95,17 @@ h3 {
     color: $holly;
 }
 a {
-    //color: $cerulean;
     &.hover {
         color: $balihai;
         text-decoration: none;
+    }
+}
+.btn-camarone {
+    background-color: $camarone;
+    color: #FFF;
+    &:hover {
+        background-color: $greenhaze;
+        color: #FFF;
     }
 }
 .btn-lynch {
