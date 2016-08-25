@@ -37,7 +37,7 @@ body {
     @media (min-width: 1300px) {
         @include page-width();
     }
-    .corner-art {
+    > .corner-art {
         position: absolute;
         height: 25px;
         width: 25px;
@@ -177,6 +177,61 @@ $top-space-vars: (0 top top, 5 top top, 10 top top, 15 top top, 25 top top, 30 t
 }
 .details {
     color: #666;
+}
+
+
+/* Header */
+header.header {
+    padding: 15px;
+    position: relative;
+    background: #FFF;
+    @media (min-width: $screen-sm-min) {
+        padding: 25px 50px;
+        margin: 15px;
+        @include shadow-2();
+    }
+    @media (min-width: 1300px) {
+        @include page-width();
+    }
+    .logo-container {
+        max-width: 400px;
+    }
+    > .corner-art {
+        position: absolute;
+        height: 25px;
+        width: 25px;
+        @media (min-width: $screen-sm-min) {
+            height: 50px;
+            width: 50px;
+        }
+        &.top-left {
+            top: 5px;
+            left: 5px;
+            background: url('/img/corner-art-top-left.svg') no-repeat;
+            background-size: contain;
+        }
+        &.top-right {
+            top: 5px;
+            right: 5px;
+            background: url('/img/corner-art-top-right.svg') no-repeat;
+            background-size: contain;
+        }
+        &.bottom-left {
+            bottom: 5px;
+            left: 5px;
+            background: url('/img/corner-art-bottom-left.svg') no-repeat;
+            background-size: contain;
+        }
+        &.bottom-right {
+            bottom: 5px;
+            right: 5px;
+            background: url('/img/corner-art-bottom-right.svg') no-repeat;
+            background-size: contain;
+        }
+
+    }
+}
+nav.navbar {
 }
 
 /* Footer */

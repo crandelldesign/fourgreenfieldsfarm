@@ -3627,7 +3627,7 @@ tbody.collapse.in {
 .navbar {
   position: relative;
   min-height: 50px;
-  margin-bottom: 20px;
+  margin-bottom: 0;
   border: 1px solid transparent; }
   .navbar:before, .navbar:after {
     content: " ";
@@ -3636,7 +3636,7 @@ tbody.collapse.in {
     clear: both; }
   @media (min-width: 768px) {
     .navbar {
-      border-radius: 4px; } }
+      border-radius: 0; } }
 
 .navbar-header:before, .navbar-header:after {
   content: " ";
@@ -3870,8 +3870,8 @@ tbody.collapse.in {
 
 .navbar-fixed-bottom .navbar-nav > li > .dropdown-menu {
   margin-bottom: 0;
-  border-top-right-radius: 4px;
-  border-top-left-radius: 4px;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0; }
 
@@ -7933,30 +7933,30 @@ body {
       max-width: 1300px;
       margin-right: auto;
       margin-left: auto; } }
-  .page .corner-art {
+  .page > .corner-art {
     position: absolute;
     height: 25px;
     width: 25px; }
     @media (min-width: 768px) {
-      .page .corner-art {
+      .page > .corner-art {
         height: 50px;
         width: 50px; } }
-    .page .corner-art.top-left {
+    .page > .corner-art.top-left {
       top: 5px;
       left: 5px;
       background: url("/img/corner-art-top-left.svg") no-repeat;
       background-size: contain; }
-    .page .corner-art.top-right {
+    .page > .corner-art.top-right {
       top: 5px;
       right: 5px;
       background: url("/img/corner-art-top-right.svg") no-repeat;
       background-size: contain; }
-    .page .corner-art.bottom-left {
+    .page > .corner-art.bottom-left {
       bottom: 5px;
       left: 5px;
       background: url("/img/corner-art-bottom-left.svg") no-repeat;
       background-size: contain; }
-    .page .corner-art.bottom-right {
+    .page > .corner-art.bottom-right {
       bottom: 5px;
       right: 5px;
       background: url("/img/corner-art-bottom-right.svg") no-repeat;
@@ -8104,6 +8104,52 @@ a.hover {
 
 .details {
   color: #666; }
+
+/* Header */
+header.header {
+  padding: 15px;
+  position: relative;
+  background: #FFF; }
+  @media (min-width: 768px) {
+    header.header {
+      padding: 25px 50px;
+      margin: 15px;
+      box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); } }
+  @media (min-width: 1300px) {
+    header.header {
+      max-width: 1300px;
+      margin-right: auto;
+      margin-left: auto; } }
+  header.header .logo-container {
+    max-width: 400px; }
+  header.header > .corner-art {
+    position: absolute;
+    height: 25px;
+    width: 25px; }
+    @media (min-width: 768px) {
+      header.header > .corner-art {
+        height: 50px;
+        width: 50px; } }
+    header.header > .corner-art.top-left {
+      top: 5px;
+      left: 5px;
+      background: url("/img/corner-art-top-left.svg") no-repeat;
+      background-size: contain; }
+    header.header > .corner-art.top-right {
+      top: 5px;
+      right: 5px;
+      background: url("/img/corner-art-top-right.svg") no-repeat;
+      background-size: contain; }
+    header.header > .corner-art.bottom-left {
+      bottom: 5px;
+      left: 5px;
+      background: url("/img/corner-art-bottom-left.svg") no-repeat;
+      background-size: contain; }
+    header.header > .corner-art.bottom-right {
+      bottom: 5px;
+      right: 5px;
+      background: url("/img/corner-art-bottom-right.svg") no-repeat;
+      background-size: contain; }
 
 /* Footer */
 footer.footer {

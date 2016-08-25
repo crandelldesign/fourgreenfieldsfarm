@@ -6,7 +6,7 @@
         {!! Analytics::render() !!}
     </head>
     <body>
-        @include('layouts.header')
+        @include('layouts.nav')
         <div class="container-fluid page">
             <div class="content">
                 @yield('content')
