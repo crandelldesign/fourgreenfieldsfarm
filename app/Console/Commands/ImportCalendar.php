@@ -68,11 +68,10 @@ class ImportCalendar extends Command
                     $event->slug = $this->toAscii($data[3]);
                     $event->starts_at = $data[5];
                     $event->ends_at = $data[6];
-                    if (strlen($data[7]) > 0 && $data[7] != 'NULL')
-                        $event->description = $data[7];
-                    $event->is_featured = $data[8];
+                    if (strlen($data[8]) > 0 && $data[8] != 'NULL')
+                        $event->description = $data[8];
                     $event->is_has_ends_at = (strpos($data[6], ' 00:00:00') !== false)?0:1;
-                    $event->is_all_day = $data[9];
+                    $event->haunted_by = $data[7];
                     $event->save();
                     $counter++;
                 }
