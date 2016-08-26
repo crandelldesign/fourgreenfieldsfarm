@@ -71,7 +71,8 @@ class ImportCalendar extends Command
                     if (strlen($data[8]) > 0 && $data[8] != 'NULL')
                         $event->description = $data[8];
                     $event->is_has_ends_at = (strpos($data[6], ' 00:00:00') !== false)?0:1;
-                    $event->haunted_by = $data[7];
+                    if (strlen($data[7]) > 0 && $data[7] != 'NULL')
+                        $event->haunted_by = $data[7];
                     $event->save();
                     $counter++;
                 }

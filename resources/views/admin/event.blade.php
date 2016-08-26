@@ -98,6 +98,12 @@
 					        </div>
 					    </div>
 					    <div class="form-group">
+					    	<label class="control-label col-sm-3">Haunted By</label>
+					    	<div class="col-sm-5">
+					    		<input type="text" class="form-control" id="haunted_by" name="haunted_by" placeholder="Haunted By" value="{{old('haunted_by')?old('haunted_by'):(isset($event)?$event->haunted_by:'')}}">
+					    	</div>
+						</div>
+					    <div class="form-group">
 					        <label class="control-label col-sm-3">Enter Description</label>
 					        <div class="col-sm-9">
 					            <textarea id="summernote" name="description" class="form-control" rows="5">{{old('description')?old('description'):(isset($event) && $event->description != 'NULL'?$event->description:'')}}</textarea>

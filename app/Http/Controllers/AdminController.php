@@ -56,6 +56,7 @@ class AdminController extends Controller
         $event->is_has_ends_at = ($request->get('is_has_ends_at'))?1:0;
         $event->is_featured = ($request->get('is_featured'))?1:0;
         $event->is_all_day = ($request->get('is_all_day'))?1:0;
+        $event->haunted_by = $request->get('haunted_by');
         $event->description = $request->get('description');
         $event->save();
 
