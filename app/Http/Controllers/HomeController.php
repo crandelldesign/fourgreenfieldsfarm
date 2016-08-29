@@ -19,17 +19,96 @@ class HomeController extends Controller
     {
         $view = view('home.index');
         $view->active_page = 'home';
-        $view->title = 'Welcome';
+        $view->title = 'Four Green Fields Farm - Rodney, MI';
+        $view->description = 'Corn maze, pumpkin patch, hay and sleigh rides in Rodney, MI';
+        return $view;
+    }
+
+    public function getDirections()
+    {
+        $view = view('home.directions');
+        $view->title = "Directions";
+        $view->description = "From Ireland to America, We Work the Land - O Eirinn go Mericea, Saothraimid an Talamh";
+
+        return $view;
+    }
+
+    public function getFarmHistory()
+    {
+        $view = view('home.farm-history');
+        $view->active_page = 'farm-history';
+        $view->title = 'Farm History';
         $view->description = '';
         return $view;
     }
 
-    public function getOurHistory()
+    public function getMapleSyrup()
     {
-        $view = view('home.our-history');
-        $view->active_page = 'our-history';
-        $view->title = 'Our History';
-        $view->description = '';
+        $view = view('home.maple-syrup');
+        $view->title = "Maple Syrup";
+        $view->description = "From Ireland to America, We Work the Land - O Eirinn go Mericea, Saothraimid an Talamh";
+        $view->active_page = 'maple-syrup';
+
+        return $view;
+    }
+
+    public function getHoney()
+    {
+        $view = view('home.honey');
+        $view->title = "Bees and Honey";
+        $view->description = "From Ireland to America, We Work the Land - O Eirinn go Mericea, Saothraimid an Talamh";
+        $view->active_page = 'honey';
+
+        return $view;
+    }
+
+    public function getPumpkinPatch()
+    {
+        $view = view('home.pumpkin-patch');
+        $view->title = "Pumpkin Patch";
+        $view->description = "From Ireland to America, We Work the Land - O Eirinn go Mericea, Saothraimid an Talamh";
+        $view->active_page = 'pumpkin-patch';
+
+        return $view;
+    }
+
+    public function getMaze()
+    {
+        $view = view('home.maze');
+        $view->title = "Maze - How to Play";
+        $view->description = "From Ireland to America, We Work the Land - O Eirinn go Mericea, Saothraimid an Talamh";
+        $view->active_page = 'maze';
+
+        return $view;
+    }
+
+    public function getBuildingTheMaze()
+    {
+        $view = view('home.building-the-maze');
+        $view->title = "Building The Maze - How to Play";
+        $view->description = "From Ireland to America, We Work the Land - O Eirinn go Mericea, Saothraimid an Talamh";
+        $view->active_page = 'maze';
+
+        return $view;
+    }
+
+    public function getHauntedMaze()
+    {
+        $view = view('home.haunted-maze');
+        $view->title = "Haunted Maze - How to Play";
+        $view->description = "From Ireland to America, We Work the Land - O Eirinn go Mericea, Saothraimid an Talamh";
+        $view->active_page = 'maze';
+
+        return $view;
+    }
+
+    public function getRides()
+    {
+        $view = view('home.rides');
+        $view->title = "Hay &amp; Sleigh Rides";
+        $view->description = "From Ireland to America, We Work the Land - O Eirinn go Mericea, Saothraimid an Talamh";
+        $view->active_page = 'rides';
+
         return $view;
     }
 

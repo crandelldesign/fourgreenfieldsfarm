@@ -1,44 +1,44 @@
-// Standard Shadows
+/* Standard Shadows */
 $z1-shadow: 0  1px  3px rgba(#000, 0.12), 0  1px  2px rgba(#000, 0.24);
 $z2-shadow: 0  3px  6px rgba(#000, 0.16), 0  3px  6px rgba(#000, 0.23);
 $z3-shadow: 0 10px 20px rgba(#000, 0.19), 0  6px  6px rgba(#000, 0.23);
 $z4-shadow: 0 14px 28px rgba(#000, 0.25), 0 10px 10px rgba(#000, 0.22);
 $z5-shadow: 0 19px 38px rgba(#000, 0.30), 0 15px 12px rgba(#000, 0.22);
 
-// Top shadows (for "bottom" positionned elements)
+/* Top shadows (for "bottom" positionned elements) */
 $top-z1-shadow: 0  -1px  3px rgba(#000, 0.12), 0  -1px  2px rgba(#000, 0.24);
 $top-z2-shadow: 0  -3px  6px rgba(#000, 0.16), 0  -3px  6px rgba(#000, 0.23);
 $top-z3-shadow: 0 -10px 20px rgba(#000, 0.19), 0  -6px  6px rgba(#000, 0.23);
 $top-z4-shadow: 0 -14px 28px rgba(#000, 0.25), 0 -10px 10px rgba(#000, 0.22);
 $top-z5-shadow: 0 -19px 38px rgba(#000, 0.30), 0 -15px 12px rgba(#000, 0.22);
 
-// Shadows for full size "side" elements (using spread to make corners look right)
+/* Shadows for full size "side" elements (using spread to make corners look right) */
 $side-z1-shadow: 0 0  3px 0.75px rgba(#000, 0.12), 0 0  2px 0.5px rgba(#000, 0.24);
 $side-z2-shadow: 0 0  6px  1.5px rgba(#000, 0.16), 0 0  6px 1.5px rgba(#000, 0.23);
 $side-z3-shadow: 0 0 20px    5px rgba(#000, 0.19), 0 0  6px 1.5px rgba(#000, 0.23);
 $side-z4-shadow: 0 0 28px    7px rgba(#000, 0.25), 0 0 10px 2.5px rgba(#000, 0.22);
 $side-z5-shadow: 0 0 38px  9.5px rgba(#000, 0.30), 0 0 12px   3px rgba(#000, 0.22);
 
-// Colors
-// Greens
+/* Colors */
+/* Greens */
 $camarone: #005a2c;
 $greenhaze: lighten($camarone,15%); //#00a751
 $holly: darken($camarone,15%); //#000e07
-// Golds
+/* Golds */
 $supernova: #ffcb05;
 $visvis: lighten($supernova,30%); //#FFEB9E
 $mustard: lighten($supernova,15%); //#FFDB52
 $pirategold: darken($supernova,15%); //#b89100
-// Blues
+/* Blues */
 $lynch: #647b97;
 $balihai: lighten($lynch,15%); //#91A2B6
 $fiord: darken($lynch,15%); //#465669
 $black: #252525;
 
-// Footer Height
+/* Footer Height */
 $footer-height: 95px;
 
-// Typography
+/* Typography */
 //$font-size-base: 14px !default;
 //$font-size-large: ceil(($font-size-base * 1.25)) !default; // ~18px
 //$font-size-small: ceil(($font-size-base * 0.85)) !default; // ~12px
@@ -46,16 +46,22 @@ $font-family-sans-serif: 'Lato', sans-serif;
 $font-family-serif: 'Cardo', serif;
 //$font-size-h1: 40px;
 
-// Bootstrap Colors and Variables
+/* Bootstrap Colors and Variables */
 $brand-primary: $camarone;
 $link-color: $lynch;
 $link-hover-color: $balihai;
 $link-hover-decoration: none;
 
-// Navbar Variables
+/* Navbar Variables */
 $navbar-margin-bottom: 0;
 $navbar-border-radius: 0;
 $nav-link-hover-bg: $visvis;
+$navbar-height: 82px;
+$navbar-padding-vertical: 15px;
 
-// Admin Colors
+/* Modal Variables */
+$modal-content-border-color: transparent;
+$modal-content-fallback-border-color: transparent;
+
+/* Admin Colors */
 $green: $camarone;
