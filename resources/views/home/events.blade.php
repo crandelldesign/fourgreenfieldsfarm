@@ -73,6 +73,11 @@
             <h4 class="panel-title">
                 @{{name}}
                 <div class="more-info">
+                    @{{#if haunted_by}}
+                    <div class="event-time">
+                        Haunted By: @{{haunted_by}}
+                    </div>
+                    @{{/if}}
                     @{{#unless is_all_day}}
                     <div class="event-time">
                         @{{starts_at_time_formatted}}

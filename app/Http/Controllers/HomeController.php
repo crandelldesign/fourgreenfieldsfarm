@@ -24,6 +24,15 @@ class HomeController extends Controller
         return $view;
     }
 
+    public function getOurHistory()
+    {
+        $view = view('home.our-history');
+        $view->active_page = 'our-history';
+        $view->title = 'Our History';
+        $view->description = '';
+        return $view;
+    }
+
     public function getEvents(Request $request, $month_year = null, $simple = false)
     {
         if ($month_year)

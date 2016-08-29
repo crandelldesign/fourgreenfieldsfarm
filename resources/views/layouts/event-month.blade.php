@@ -28,17 +28,21 @@
                 <td data-date="{{$dates->date_time}}" data-php_date="{{$dates->php_date}}" class="{{(isset($dates->events) && isset($dates->events[0]->name))?'has-event':''}} {{(date('mdY',$dates->php_date) == date('mdY',$current_date))?'active':''}}">
                     <strong class="day-count">{{$dates->day_count}}</strong>
                     @if(isset($dates->events))
-                    @foreach ($dates->events as $event)
-                    @if (isset($event->name))
-                    <a class="cal-event" data-event_id="{{$event->id}}">
-                        <span class="event-title">{{$event->name}}</span>
-                        @if(!$event->is_all_day)
-                        <br>
-                        {{date('g:ia',strtotime($event->starts_at))}} @if($event->is_has_ends_at) - {{date('g:ia',strtotime($event->ends_at))}} @endif
-                        @endif
-                    </a>
-                    @endif
-                    @endforeach
+                        @foreach ($dates->events as $event)
+                            @if (isset($event->name))
+                                <a class="cal-event" data-event_id="{{$event->id}}">
+                                    <span class="event-title">{{$event->name}}</span>
+                                    @if(!$event->is_all_day)
+                                        <br>
+                                        {{date('g:ia',strtotime($event->starts_at))}} @if($event->is_has_ends_at) - {{date('g:ia',strtotime($event->ends_at))}} @endif
+                                    @endif
+                                    @if($event->haunted_by)
+                                        <br>
+                                        Haunted By: {{$event->haunted_by}}
+                                    @endif
+                                </a>
+                            @endif
+                        @endforeach
                     @endif
                 </td>
                 @if($i % 7 == 0)

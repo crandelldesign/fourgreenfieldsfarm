@@ -182,11 +182,11 @@ $top-space-vars: (0 top top, 5 top top, 10 top top, 15 top top, 25 top top, 30 t
 
 /* Header */
 header.header {
-    padding: 15px;
+    padding: 15px 15px 0;
     position: relative;
     background: #FFF;
     @media (min-width: $screen-sm-min) {
-        padding: 25px 50px;
+        padding: 25px 50px 0;
         margin: 15px;
         @include shadow-2();
     }
@@ -232,6 +232,23 @@ header.header {
     }
 }
 nav.navbar {
+    margin-top: 15px;
+    border: 0;
+    border-top: 1px solid $holly;
+    a {
+        font-family: $font-family-serif;
+        color: $camarone;
+        @media (min-width: $screen-sm-min) {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        &:hover {
+            color: $holly;
+        }
+    }
+    li.active a {
+        background-color: $nav-link-hover-bg;
+    }
 }
 
 /* Footer */
@@ -306,9 +323,12 @@ footer.footer {
                 text-overflow: ellipsis;
                 max-width: 30px;
                 @media (min-width: $screen-sm-min) {
-                    font-size: 11px;
+                    font-size: 10px;
                     white-space: normal;
                     max-width: none;
+                    .event-title {
+                        font-size: 11px;
+                    }
                 }
                 &:hover {
                     color: $link-hover-color;

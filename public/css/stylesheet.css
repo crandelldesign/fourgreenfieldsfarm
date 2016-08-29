@@ -3524,7 +3524,7 @@ tbody.collapse.in {
       padding: 10px 15px; }
       .nav > li > a:hover, .nav > li > a:focus {
         text-decoration: none;
-        background-color: #eeeeee; }
+        background-color: #ffeb9e; }
     .nav > li.disabled > a {
       color: #777777; }
       .nav > li.disabled > a:hover, .nav > li.disabled > a:focus {
@@ -3533,7 +3533,7 @@ tbody.collapse.in {
         background-color: transparent;
         cursor: not-allowed; }
   .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
-    background-color: #eeeeee;
+    background-color: #ffeb9e;
     border-color: #647b97; }
   .nav .nav-divider {
     height: 1px;
@@ -8107,12 +8107,12 @@ a.hover {
 
 /* Header */
 header.header {
-  padding: 15px;
+  padding: 15px 15px 0;
   position: relative;
   background: #FFF; }
   @media (min-width: 768px) {
     header.header {
-      padding: 25px 50px;
+      padding: 25px 50px 0;
       margin: 15px;
       box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); } }
   @media (min-width: 1300px) {
@@ -8150,6 +8150,22 @@ header.header {
       right: 5px;
       background: url("/img/corner-art-bottom-right.svg") no-repeat;
       background-size: contain; }
+
+nav.navbar {
+  margin-top: 15px;
+  border: 0;
+  border-top: 1px solid #000e07; }
+  nav.navbar a {
+    font-family: "Cardo", serif;
+    color: #005a2c; }
+    @media (min-width: 768px) {
+      nav.navbar a {
+        font-size: 20px;
+        font-weight: bold; } }
+    nav.navbar a:hover {
+      color: #000e07; }
+  nav.navbar li.active a {
+    background-color: #ffeb9e; }
 
 /* Footer */
 footer.footer {
@@ -8217,9 +8233,11 @@ footer.footer {
       max-width: 30px; }
       @media (min-width: 768px) {
         .calendar-page .calendar td a.cal-event {
-          font-size: 11px;
+          font-size: 10px;
           white-space: normal;
-          max-width: none; } }
+          max-width: none; }
+          .calendar-page .calendar td a.cal-event .event-title {
+            font-size: 11px; } }
       .calendar-page .calendar td a.cal-event:hover {
         color: #91a2b6; }
 
