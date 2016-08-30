@@ -17,26 +17,24 @@
 
 <div class="row">
 	<div class="col-sm-6 margin-bottom-15">
-		<div id="slideshow1" class="slideshow carousel slide" data-ride="carousel">
-			<div class="carousel-inner">
-				<div class="item active">
-					<a class="slideshow-link1 thumbnail-popup" href="{{url('/')}}/img/photos/syrup2.jpg"><img src="{{url('/')}}/img/photos/cropped/syrup2.jpg" class="img-responsive" /></a>
-			    </div>
-			    <div class="item">
-			    	<a class="slideshow-link1 thumbnail-popup" href="{{url('/')}}/img/photos/syrup5.jpg"><img src="{{url('/')}}/img/photos/cropped/syrup5.jpg" class="img-responsive" /></a>
-			    </div>
+		<div class="slideshow" id="slideshow1">
+			<div class="arrows"></div>
+			<div class="item active">
+				<a class="slideshow-link1 thumbnail-popup" href="{{url('/')}}/img/photos/syrup2.jpg"><img src="{{url('/')}}/img/photos/cropped/syrup2.jpg" class="img-responsive" /></a>
+		    </div>
+		    <div class="item">
+		    	<a class="slideshow-link1 thumbnail-popup" href="{{url('/')}}/img/photos/syrup5.jpg"><img src="{{url('/')}}/img/photos/cropped/syrup5.jpg" class="img-responsive" /></a>
 		    </div>
 		</div>
 	</div>
 	<div class="col-sm-6 margin-bottom-15">
-		<div id="slideshow2" class="slideshow carousel slide" data-ride="carousel">
-			<div class="carousel-inner">
-				 <div class="item active">
-			    	<a class="slideshow-link3 thumbnail-popup" href="{{url('/')}}/img/photos/syrup3.jpg"><img src="{{url('/')}}/img/photos/cropped/syrup3.jpg" class="img-responsive" /></a>
-			    </div>
-			    <div class="item">
-			    	<a class="slideshow-link6 thumbnail-popup" href="{{url('/')}}/img/photos/syrup6.jpg"><img src="{{url('/')}}/img/photos/cropped/syrup6.jpg" class="img-responsive" /></a>
-			    </div>
+		<div class="slideshow">
+			<div class="arrows"></div>
+			<div class="item active">
+		    	<a class="slideshow-link3 thumbnail-popup" href="{{url('/')}}/img/photos/syrup3.jpg"><img src="{{url('/')}}/img/photos/cropped/syrup3.jpg" class="img-responsive" /></a>
+		    </div>
+		    <div class="item">
+		    	<a class="slideshow-link6 thumbnail-popup" href="{{url('/')}}/img/photos/syrup6.jpg"><img src="{{url('/')}}/img/photos/cropped/syrup6.jpg" class="img-responsive" /></a>
 		    </div>
 		</div>
 	</div>
@@ -98,5 +96,29 @@
 </tr>
 </table>
 <p><a href="http://www.bigrapids.org/" target="_blank">Mecosta County Visitor Information</a></p>
+
+@stop
+
+@section('scripts')
+<script>
+    $(document).ready(function()
+    {
+    	$('.slideshow').each(function (idx, item) {
+		   var slideshowId = "slideshow" + idx;
+		   this.id = slideshowId;
+		   $(this).slick({
+		       	slide: "#" + slideshowId +" .item",
+		       	appendArrows: "#" + slideshowId + " .arrows",
+		       	prevArrow: '<button type="button" class="slideshow-prev btn-link"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-angle-left fa-stack-1x"></i></span></button>',
+            	nextArrow: '<button type="button" class="slideshow-next btn-link"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-angle-right fa-stack-1x"></i></span></button>',
+		       	autoplay: true,
+		   });
+		});
+		$('.slideshow-prev, .slideshow-next').on('click', function(event)
+        {
+            $(this).closest('.slideshow').slick('slickPause');
+        });
+    });
+</script>
 
 @stop

@@ -10415,6 +10415,7 @@ $(document).ready(function()
         });
         $('#img-modal .modal-body').html(html);
         $('#img-modal').modal('show');
+        $(this).closest('.slideshow').slick('slickPause');
     });
 });
 //# sourceMappingURL=default.js.map

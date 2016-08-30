@@ -3,6 +3,7 @@
 @import 'variables';
 @import 'bootstrap';
 @import 'font-awesome';
+@import 'slick.scss';
 
 /* Body Styles */
 html {
@@ -324,6 +325,54 @@ footer.footer {
 .modal-content {
     border-radius: 0;
     @include shadow-2();
+}
+
+/* Slideshow */
+.slideshow {
+    max-width: 800px;
+    max-height: 300px;
+    overflow: hidden;
+    margin: 0 auto 20px auto;
+    .slideshow-prev, .slideshow-next {
+        /*font-size: 20px;*/
+        position: absolute;
+        top: 0;
+        display: block;
+        width: 53px;
+        height: 100%;
+        z-index: 20;
+        .fa.fa-circle {
+            color: #FFF;
+            border-radius: 50%;
+
+        }
+        &:hover .fa.fa-circle {
+            background-color: $lynch;
+            -webkit-transition: background-color 1s linear;
+            -moz-transition: background-color 1s linear;
+            -o-transition: background-color 1s linear;
+            -ms-transition: background-color 1s linear;
+            transition: background-color 1s linear;
+        }
+        &:focus {
+            outline: 0;
+        }
+    }
+    .slideshow-prev {
+        left: 0;
+        .fa-angle-left {
+            left: -2px;
+            top: -1px;
+        }
+    }
+    .slideshow-next {
+        right: 0;
+        .fa-angle-left {
+            right: -2px;
+            top: -1px;
+        }
+
+    }
 }
 
 /* Hours and Prices */
