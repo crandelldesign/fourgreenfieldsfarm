@@ -25,7 +25,7 @@
 		</div>
 	</div>
 	<div class="col-sm-6 margin-bottom-15">
-		<div id="slideshow2" class="slideshow carousel slide" data-ride="carousel">
+		<!--<div id="slideshow2" class="slideshow carousel slide" data-ride="carousel">
 			<div class="carousel-inner">
 				 <div class="item active">
 			    	<a class="slideshow-link3" data-featherlight="image" href="{{url('/')}}/img/photos/syrup3.jpg"><img src="{{url('/')}}/img/photos/cropped/syrup3.jpg" class="img-responsive" /></a>
@@ -34,7 +34,10 @@
 			    	<a class="slideshow-link6" data-featherlight="image" href="{{url('/')}}/img/photos/syrup6.jpg"><img src="{{url('/')}}/img/photos/cropped/syrup6.jpg" class="img-responsive" /></a>
 			    </div>
 		    </div>
-		</div>
+		</div>-->
+		<div class="item active">
+	    	<a class="slideshow-link3" data-featherlight="image" href="{{url('/')}}/img/photos/syrup3.jpg"><img src="{{url('/')}}/img/photos/cropped/syrup3.jpg" class="img-responsive" /></a>
+	    </div>
 	</div>
 </div>
 <div class="clearfix"></div>
