@@ -8270,27 +8270,36 @@ nav.navbar {
       border-top: 1px solid #000e07; } }
   nav.navbar .navbar-brand img {
     max-width: 200px; }
+  nav.navbar .nav.navbar-nav {
+    margin-bottom: 30px; }
+    @media (min-width: 768px) {
+      nav.navbar .nav.navbar-nav {
+        margin-bottom: 0;
+        float: none;
+        text-align: center; } }
+    @media (min-width: 768px) {
+      nav.navbar .nav.navbar-nav > li {
+        float: none;
+        display: inline-block; } }
+    nav.navbar .nav.navbar-nav > li.active a {
+      background-color: #ffeb9e; }
   nav.navbar a {
     font-family: "Cardo", serif;
     color: #005a2c; }
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
       nav.navbar a {
-        font-size: 20px;
+        font-size: 18px;
         font-weight: bold; } }
+    @media (min-width: 1300px) {
+      nav.navbar a {
+        font-size: 20px; } }
     nav.navbar a:hover {
       color: #000e07; }
-  nav.navbar li.active a {
-    background-color: #ffeb9e; }
   nav.navbar .navbar-toggle {
     border-color: #005a2c;
     background-color: #ffcb05; }
     nav.navbar .navbar-toggle .icon-bar {
       background-color: #005a2c; }
-  nav.navbar .nav.navbar-nav {
-    margin-bottom: 30px; }
-    @media (min-width: 768px) {
-      nav.navbar .nav.navbar-nav {
-        margin-bottom: 0; } }
 
 /* Footer */
 footer.footer {
