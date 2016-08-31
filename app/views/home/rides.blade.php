@@ -107,7 +107,7 @@
 		<p>Here is what you can look forward to seeing in the winter.  Think about it:  A frosty ride through the woods to a roaring bonfire where you can laugh talk and realize what beauty Michigan has no matter the season. If you book in the winter and there is no snow, don't worry we will just use the wheeled wagon.</p>
 
 <div class="clearfix"></div>
-<p class="text-center"><strong>Wagon/Sleigh Ride with bonfire and use of our warming house is $75. Please contact us for pricing options for groups of 40 or more people.</strong></p>
+<p class="text-center"><strong>Wagon/Sleigh Ride with bonfire and use of our warming house is $80. Please contact us for pricing options for groups of 40 or more people.</strong></p>
 
 <p>If you'd like to combine the corn maze experience with a wagon ride, contact us for details on how you can do that. You can contact us at the email link or phone number on our home page.</p>
 

@@ -25,9 +25,9 @@
 <h3>Four Green Fields Farm Corn Maze</h3>
 <p>Rodney, MI 49342</p>
 <p><strong>FUN FOR ALL AGES</strong></p>
-<p>The regular Maze is Open Saturdays from Noon to 5:30pm and Sundays from 2 to 5 from September 19 to November 1 <span style="font-size:10px">(Weather Permitting)</span></p>
+<p>The regular Maze is Open Saturdays from Noon to 5:30pm and Sundays from 2 to 5 from September 24 to October 30 <span style="font-size:10px">(Weather Permitting)</span></p>
 <p>Admission: $3. Kids under 5 are FREE! Horse Drawn Wagon Rides $2</p>
-<p>The Haunted Maze is open Friday and Saturday nights from 8 to 10:30pm October 9th to 31st.</p>
+<p>The Haunted Maze is open Friday and Saturday nights from 8 to 10:30pm October 7 to 29.</p>
 <p>Admission: $4</p>
 <p class="text-center">PRIVATE GROUP BOOKINGS AVAILABLE!</p>
 <p>Phone: 231-580-1463 and ask for Kevin<br />

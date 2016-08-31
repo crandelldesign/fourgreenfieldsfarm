@@ -7,3 +7,10 @@ composer.lock
 .DS_Store
 Thumbs.db
 sftp-config.json
+/node_modules
+/public/storage
+/.idea
+/storage
+Homestead.json
+Homestead.yaml
+.env
