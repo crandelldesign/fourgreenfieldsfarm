@@ -7,8 +7,8 @@
 
 <h1>Welcome to the Four Green Fields Farm</h1>
 
-<div class="pull-right margin-left-15 margin-bottom-15 img-aside-sm">
-    <p><a href="{{url('/')}}/img/photos/enterance-sign-pic.jpg" class="thumbnail-popup"><img src="{{url('/')}}/img/photos/enterance-sign-pic.jpg" class="img-responsive img-border center-block" style="max-width: 300px" alt="Four Green Fields Enterance Sign" /></a></p>
+<div class="img-right-sm">
+    <p><a href="{{url('/')}}/img/photos/enterance-sign-pic.jpg" class="thumbnail-popup"><img src="{{url('/')}}/img/photos/enterance-sign-pic.jpg" class="img-responsive img-border center-block img-width-300" alt="Four Green Fields Enterance Sign" /></a></p>
 </div>
 <div class="clearfix visible-xs"></div>
 <p>We are located about 7 miles east of US 131 off exit 139 and about 5 miles east of the City of Big Rapids.</p>
