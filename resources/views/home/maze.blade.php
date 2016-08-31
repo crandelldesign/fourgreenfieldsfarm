@@ -70,12 +70,12 @@
 	            <dd class="body_text">Pretty simple: Walk in the entrance and try to find the exit.</dd>
 	        <dt>Level 2</dt>
 	            <dd class="body_text">A little tougher: Walk in the entrance and not only do you have to try and find the exit but you must also find the 6 treasure chests (wire baskets with different colored plastic chips) hidden throughout the maze. We do our best to keep our costs down so sorry no pirates' chest full of gold. Collect all 5 colors and we'll have a little bonus for you when you finish.</dd>
-	        <dt>Level 3</dt>
-	            <dd class="body_text">As we say here on the farm, time to separate the wheat from the chaff. This level requires you to solve the Maze, find all 6 treasure chests, and should you be unlucky enough to make a wrong turn and come to a “Exit and Start Over” sign you have to leave the Maze, walk back to the entrance and start over. If you are directionally challenged and decide to play this level you might want to bring food and water.</dd>
+	        <!--<dt>Level 3</dt>
+	            <dd class="body_text">As we say here on the farm, time to separate the wheat from the chaff. This level requires you to solve the Maze, find all 6 treasure chests, and should you be unlucky enough to make a wrong turn and come to a “Exit and Start Over” sign you have to leave the Maze, walk back to the entrance and start over. If you are directionally challenged and decide to play this level you might want to bring food and water.</dd>-->
 	    </dl>
 	</div>
 	<div class="col-sm-6 img-group">
-		<p><a class="thumbnail-popup" href="{{url('/')}}/img/photos/japan_in_the_maze.jpg"><img src="{{url('/')}}/img/photos/japan_in_the_maze.jpg" class="img-repsonsive center-block" alt="Our Maze is so much fun people came all the way from Tokyo to go through it!" /></a></p>
+		<p><a class="thumbnail-popup" href="{{url('/')}}/img/photos/japan_in_the_maze.jpg"><img src="{{url('/')}}/img/photos/japan_in_the_maze.jpg" class="img-responsive center-block" alt="Our Maze is so much fun people came all the way from Tokyo to go through it!" /></a></p>
     	<p class="text-center caption">Our Maze is so much fun people came all the way from Tokyo to go through it!</p>
 	</div>
 </div>
