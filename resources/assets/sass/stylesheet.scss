@@ -118,6 +118,11 @@ a {
         color: #FFF;
     }
 }
+.caption {
+    // Ex: (12px small font / 14px base font) * 100% = about 85%
+    font-size: floor((100% * $font-size-small / $font-size-base));
+    color: $gray-light;
+}
 
 /* Spacing Elements */
 @mixin generate-spacing-classes(

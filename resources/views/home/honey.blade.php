@@ -13,14 +13,14 @@
     <p>Keeping bees involves providing them with a hive to live in.  Each hive contains over 10,000 bees. Bees store their honey in the hive and the queen bee lays her eggs there, too.  A constant supply of new bees is needed because a bee's life expectancy is only about three weeks.  Not a lot of time to make your mark is it?</p>
 
     <div class="text-center img-group">
-        <a class="thumbnail-popup" href="{{url('/')}}/img/photos/honey1.jpg"><img class="img-responsive center-block" src="{{url('/')}}/img/photos/honey1.jpg"></a>
+        <a class="thumbnail-popup" href="{{url('/')}}/img/photos/honey1.jpg" data-caption="Complete hives with 2 deeps and 2 supers"><img class="img-responsive center-block" src="{{url('/')}}/img/photos/honey1.jpg"></a>
         <div class="caption">Complete hives with 2 deeps and 2 supers</div>
     </div>
 
     <p>Bee hives are made up of &quot;deeps&quot; and &quot;supers&quot;.  Deeps are the base units of the hive that are used for storing honey and brood. Each super and deep contains about 10 frames. The bees build comb on the frames.  The comb is used by the bees to store pollen and honey, and to raise brood (baby bees).  Bees enter the hive through an opening at the front of the first deep.  In the early spring and late fall, a feeder is placed on the top of the hive so that sugar water and in some cases bee cake can be placed in the hive to supplement the bees food sources and help them survive the cold weather.</p>
 
     <div class="text-center img-group">
-        <a class="thumbnail-popup" href="{{url('/')}}/img/photos/honey2.jpg"><img class="img-responsive center-block" src="{{url('/')}}/img/photos/honey2.jpg"></a>
+        <a class="thumbnail-popup" href="{{url('/')}}/img/photos/honey2.jpg" data-caption="Deep frame covered with bees before there is any brood or honey present"><img class="img-responsive center-block" src="{{url('/')}}/img/photos/honey2.jpg"></a>
         <div class="caption">Deep frame covered with bees before there is any brood or honey present</div>
     </div>
 
@@ -29,13 +29,13 @@
     <div class="row">
     <div class="col-xs-6">
         <div class="text-center img-group">
-            <a class="thumbnail-popup" href="{{url('/')}}/img/photos/honey3.jpg"><img class="img-responsive center-block" src="{{url('/')}}/img/photos/honey3.jpg"></a>
+            <a class="thumbnail-popup" href="{{url('/')}}/img/photos/honey3.jpg" data-caption="Four Green Fields Farm beekeeper placing nucs in the hives"><img class="img-responsive center-block" src="{{url('/')}}/img/photos/honey3.jpg"></a>
             <div class="caption">Four Green Fields Farm beekeeper placing nucs in the hives</div>
         </div>
     </div>
     <div class="col-xs-6">
         <div class="text-center img-group">
-            <a class="thumbnail-popup" href="{{url('/')}}/img/photos/honey4.jpg"><img class="img-responsive center-block" src="{{url('/')}}/img/photos/honey4.jpg"></a>
+            <a class="thumbnail-popup" href="{{url('/')}}/img/photos/honey4.jpg" data-caption="Two boxes of bees ready to be placed in hives"><img class="img-responsive center-block" src="{{url('/')}}/img/photos/honey4.jpg"></a>
             <div class="caption">Two boxes of bees ready to be placed in hives</div>
         </div>
     </div>
@@ -44,14 +44,14 @@
     <p>Bee keeping starts out by placing bees from a box or nuc into a single deep.  A nuc is a mini hive in which the bees have already been building comb on the 5 frames in the nuc.  Hopefully the queen has also laid some eggs in the comb.  Box bees are just that, bees in a box with a queen.  These bees are transferred into a hive so they can begin building comb and the queen can begin laying eggs.  No matter which method is used to start a hive, the goal is to have the bees start building comb and the queen to start laying eggs in her new home so that more and more bees are added to the hive.  The beekeeper will add a second deep once the first one becomes almost full of brood and honey so the hive can continue to expand.  The comb is &quot;capped&quot; by the bees after it is filled with either brood or honey.  The cap is a light wax-like substance that holds the eggs or honey in the individual chambers of the comb.</p>
 
     <div class="text-center img-group">
-        <a class="thumbnail-popup" href="{{url('/')}}/img/photos/honey5.jpg"><img class="img-responsive center-block" src="{{url('/')}}/img/photos/honey5.jpg"></a>
+        <a class="thumbnail-popup" href="{{url('/')}}/img/photos/honey5.jpg" data-caption="Deep frame after bees have begun storing honey and the queen has laid eggs. Honey is in upper left corner and brood is in the center"><img class="img-responsive center-block" src="{{url('/')}}/img/photos/honey5.jpg"></a>
         <div class="caption">Deep frame after bees have begun storing honey and the queen has laid eggs. Honey is in upper left corner and brood is in the center</div>
     </div>
 
     <p>Working with bees is not without risks since they have the ability to sting you.  If you have ever been stung by a bee you know it can be very painful.  Multiply that by 20 or 30 and you know why beekeepers take precautions.  The most obvious is the white bee jacket you see in the photos.  This has a hood with a screen that protects the keepers' face while still allowing for air flow and good vision.  The beekeeper will also use a smoker to pump smoke into the hive which has a calming effect on the bees reducing their distress and the chance of the beekeeper being stung.  Bees die after stinging so that is another reason we try to avoid having them sting.</p>
 
     <div class="text-center img-group">
-        <a class="thumbnail-popup" href="{{url('/')}}/img/photos/honey6.jpg"><img class="img-responsive center-block" src="{{url('/')}}/img/photos/honey6.jpg"></a>
+        <a class="thumbnail-popup" href="{{url('/')}}/img/photos/honey6.jpg" data-caption="Beekeeper putting smoke into a deep before removing the lid and working with the hive"><img class="img-responsive center-block" src="{{url('/')}}/img/photos/honey6.jpg"></a>
         <div class="caption">Beekeeper putting smoke into a deep before removing the lid and working with the hive</div>
     </div>
 
