@@ -17,13 +17,13 @@
 
 <div class="row">
 	<div class="col-sm-6 margin-bottom-15">
-		<div class="slideshow" id="slideshow1">
+		<div class="slideshow">
 			<div class="arrows"></div>
 			<div class="item active">
-				<a class="slideshow-link1 thumbnail-popup" href="{{url('/')}}/img/photos/syrup2.jpg"><img src="{{url('/')}}/img/photos/cropped/syrup2.jpg" class="img-responsive" /></a>
+				<a class="slideshow-link1 thumbnail-popup" href="{{url('/')}}/img/photos/syrup2.jpg"><img src="{{url('/')}}/img/photos/cropped/syrup2.jpg" class="img-responsive" alt="Making Maple Syrup 1" /></a>
 		    </div>
 		    <div class="item">
-		    	<a class="slideshow-link1 thumbnail-popup" href="{{url('/')}}/img/photos/syrup5.jpg"><img src="{{url('/')}}/img/photos/cropped/syrup5.jpg" class="img-responsive" /></a>
+		    	<a class="slideshow-link1 thumbnail-popup" href="{{url('/')}}/img/photos/syrup5.jpg"><img src="{{url('/')}}/img/photos/cropped/syrup5.jpg" class="img-responsive" alt="Making Maple Syrup 2" /></a>
 		    </div>
 		</div>
 	</div>
@@ -31,10 +31,10 @@
 		<div class="slideshow">
 			<div class="arrows"></div>
 			<div class="item active">
-		    	<a class="slideshow-link3 thumbnail-popup" href="{{url('/')}}/img/photos/syrup3.jpg"><img src="{{url('/')}}/img/photos/cropped/syrup3.jpg" class="img-responsive" /></a>
+		    	<a class="slideshow-link3 thumbnail-popup" href="{{url('/')}}/img/photos/syrup3.jpg"><img src="{{url('/')}}/img/photos/cropped/syrup3.jpg" class="img-responsive" alt="Making Maple Syrup 3" /></a>
 		    </div>
 		    <div class="item">
-		    	<a class="slideshow-link6 thumbnail-popup" href="{{url('/')}}/img/photos/syrup6.jpg"><img src="{{url('/')}}/img/photos/cropped/syrup6.jpg" class="img-responsive" /></a>
+		    	<a class="slideshow-link6 thumbnail-popup" href="{{url('/')}}/img/photos/syrup6.jpg"><img src="{{url('/')}}/img/photos/cropped/syrup6.jpg" class="img-responsive" alt="Making Maple Syrup 4" /></a>
 		    </div>
 		</div>
 	</div>
@@ -48,7 +48,7 @@
     	<p>Once the sap is collected and hauled to the &quot;Sugar House&quot; the process of boiling it down can begin. The sap is poured into a pan usually over a wood fire contained in an &quot;arch&quot;. The combination of arch and pan is called an evaporator and often includes a hood which captures the rising steam to preheat the sap before it goes into the pan for boiling. How fast the sap is converted into syrup is based on the amount of sap being boiled and the surface area of the pan. The greater the surface area of the pan the faster the excess water is evaporated and syrup is created. Once all the excess water is boiled off what is left is pure maple syrup.</p>
 	</div>
 	<div class="col-sm-6">
-		<p class="item"><a class="syrup1 thumbnail-popup" href="{{url('/')}}/img/photos/syrup4.jpg"><img src="{{url('/')}}/img/photos/cropped/syrup4.jpg" alt="" class="img-responsive" /></a></p>
+		<p class="item"><a class="syrup1 thumbnail-popup" href="{{url('/')}}/img/photos/syrup4.jpg"><img src="{{url('/')}}/img/photos/cropped/syrup4.jpg" alt="Making Maple Syrup 5" class="img-responsive img-border" /></a></p>
 	</div>
 </div>
 <div class="clearfix"></div>
@@ -100,25 +100,6 @@
 @stop
 
 @section('scripts')
-<script>
-    $(document).ready(function()
-    {
-    	$('.slideshow').each(function (idx, item) {
-		   var slideshowId = "slideshow" + idx;
-		   this.id = slideshowId;
-		   $(this).slick({
-		       	slide: "#" + slideshowId +" .item",
-		       	appendArrows: "#" + slideshowId + " .arrows",
-		       	prevArrow: '<button type="button" class="slideshow-prev btn-link"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-angle-left fa-stack-1x"></i></span></button>',
-            	nextArrow: '<button type="button" class="slideshow-next btn-link"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-angle-right fa-stack-1x"></i></span></button>',
-		       	autoplay: true,
-		   });
-		});
-		$('.slideshow-prev, .slideshow-next').on('click', function(event)
-        {
-            $(this).closest('.slideshow').slick('slickPause');
-        });
-    });
-</script>
+<script type="text/javascript" src="{{ elixir('js/slideshow.js') }}"></script>
 
 @stop

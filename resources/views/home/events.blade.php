@@ -2,55 +2,54 @@
 @section('content')
 <h1>Calendar</h1>
 
-<div class="pull-left margin-right-15 margin-bottom-15 img-aside-sm">
-        <div id="slideshow1" class="slideshow carousel slide center-block" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="item active">
-                    <a class="slideshow-link thumbnail-popup" href="{{url('/')}}/img/photos/events1.jpg"><img src="{{url('/')}}/img/photos/cropped/events1.jpg" class="img-responsive center-block" /></a>
-                </div>
-                <div class="item">
-                    <a class="slideshow-link thumbnail-popup" href="{{url('/')}}/img/photos/events2.jpg"><img src="{{url('/')}}/img/photos/cropped/events2.jpg" class="img-responsive center-block" /></a>
-                </div>
-                <div class="item">
-                    <a class="slideshow-link thumbnail-popup" href="{{url('/')}}/img/photos/events3.jpg"><img src="{{url('/')}}/img/photos/cropped/events3.jpg" class="img-responsive center-block" /></a>
-                </div>
-                <div class="item">
-                    <a class="slideshow-link thumbnail-popup" href="{{url('/')}}/img/photos/events4.jpg"><img src="{{url('/')}}/img/photos/cropped/events4.jpg" class="img-responsive center-block" /></a>
-                </div>
-                <div class="item">
-                    <a class="slideshow-link thumbnail-popup" href="{{url('/')}}/img/photos/events5.jpg"><img src="{{url('/')}}/img/photos/cropped/events5.jpg" class="img-responsive center-block" /></a>
-                </div>
-                <div class="item">
-                    <a class="slideshow-link thumbnail-popup" href="{{url('/')}}/img/photos/events6.jpg"><img src="{{url('/')}}/img/photos/cropped/events6.jpg" class="img-responsive center-block" /></a>
-                </div>
-                <div class="item">
-                    <a class="slideshow-link thumbnail-popup" href="{{url('/')}}/img/photos/events7.jpg"><img src="{{url('/')}}/img/photos/cropped/events7.jpg" class="img-responsive center-block" /></a>
-                </div>
-                <div class="item">
-                    <a class="slideshow-link thumbnail-popup" href="{{url('/')}}/img/photos/events8.jpg"><img src="{{url('/')}}/img/photos/cropped/events8.jpg" class="img-responsive center-block" /></a>
-                </div>
-                <div class="item">
-                    <a class="slideshow-link thumbnail-popup" href="{{url('/')}}/img/photos/events9.jpg"><img src="{{url('/')}}/img/photos/cropped/events9.jpg" class="img-responsive center-block" /></a>
-                </div>
-                <div class="item">
-                    <a class="slideshow-link thumbnail-popup" href="{{url('/')}}/img/photos/events10.jpg"><img src="{{url('/')}}/img/photos/cropped/events10.jpg" class="img-responsive center-block" /></a>
-                </div>
-                <div class="item">
-                    <a class="slideshow-link thumbnail-popup" href="{{url('/')}}/img/photos/events11.jpg"><img src="{{url('/')}}/img/photos/cropped/events11.jpg" class="img-responsive center-block" /></a>
-                </div>
-                <div class="item">
-                    <a class="slideshow-link thumbnail-popup" href="{{url('/')}}/img/photos/events12.jpg"><img src="{{url('/')}}/img/photos/cropped/events12.jpg" class="img-responsive center-block" /></a>
-                </div>
-                <div class="item">
-                    <a class="slideshow-link thumbnail-popup" href="{{url('/')}}/img/photos/events13.jpg"><img src="{{url('/')}}/img/photos/cropped/events13.jpg" class="img-responsive center-block" /></a>
-                </div>
-                <div class="item">
-                    <a class="slideshow-link thumbnail-popup" href="{{url('/')}}/img/photos/events14.jpg"><img src="{{url('/')}}/img/photos/cropped/events14.jpg" class="img-responsive center-block" /></a>
-                </div>
-            </div>
+<div class="img-left-sm img-width-300">
+    <div class="slideshow">
+        <div class="arrows"></div>
+        <div class="item active">
+            <a class="slideshow-link thumbnail-popup" href="{{url('/')}}/img/photos/events1.jpg"><img src="{{url('/')}}/img/photos/cropped/events1.jpg" class="img-responsive center-block" alt="Event page photo 1" /></a>
+        </div>
+        <div class="item">
+            <a class="slideshow-link thumbnail-popup" href="{{url('/')}}/img/photos/events2.jpg"><img src="{{url('/')}}/img/photos/cropped/events2.jpg" class="img-responsive center-block" alt="Event page photo 2" /></a>
+        </div>
+        <div class="item">
+            <a class="slideshow-link thumbnail-popup" href="{{url('/')}}/img/photos/events3.jpg"><img src="{{url('/')}}/img/photos/cropped/events3.jpg" class="img-responsive center-block" alt="Event page photo 3" /></a>
+        </div>
+        <div class="item">
+            <a class="slideshow-link thumbnail-popup" href="{{url('/')}}/img/photos/events4.jpg"><img src="{{url('/')}}/img/photos/cropped/events4.jpg" class="img-responsive center-block" alt="Event page photo 4" /></a>
+        </div>
+        <div class="item">
+            <a class="slideshow-link thumbnail-popup" href="{{url('/')}}/img/photos/events5.jpg"><img src="{{url('/')}}/img/photos/cropped/events5.jpg" class="img-responsive center-block" alt="Event page photo 5" /></a>
+        </div>
+        <div class="item">
+            <a class="slideshow-link thumbnail-popup" href="{{url('/')}}/img/photos/events6.jpg"><img src="{{url('/')}}/img/photos/cropped/events6.jpg" class="img-responsive center-block" alt="Event page photo 6" /></a>
+        </div>
+        <div class="item">
+            <a class="slideshow-link thumbnail-popup" href="{{url('/')}}/img/photos/events7.jpg"><img src="{{url('/')}}/img/photos/cropped/events7.jpg" class="img-responsive center-block" alt="Event page photo 7" /></a>
+        </div>
+        <div class="item">
+            <a class="slideshow-link thumbnail-popup" href="{{url('/')}}/img/photos/events8.jpg"><img src="{{url('/')}}/img/photos/cropped/events8.jpg" class="img-responsive center-block" alt="Event page photo 8" /></a>
+        </div>
+        <div class="item">
+            <a class="slideshow-link thumbnail-popup" href="{{url('/')}}/img/photos/events9.jpg"><img src="{{url('/')}}/img/photos/cropped/events9.jpg" class="img-responsive center-block" alt="Event page photo 9" /></a>
+        </div>
+        <div class="item">
+            <a class="slideshow-link thumbnail-popup" href="{{url('/')}}/img/photos/events10.jpg"><img src="{{url('/')}}/img/photos/cropped/events10.jpg" class="img-responsive center-block" alt="Event page photo 10" /></a>
+        </div>
+        <div class="item">
+            <a class="slideshow-link thumbnail-popup" href="{{url('/')}}/img/photos/events11.jpg"><img src="{{url('/')}}/img/photos/cropped/events11.jpg" class="img-responsive center-block" alt="Event page photo 11" /></a>
+        </div>
+        <div class="item">
+            <a class="slideshow-link thumbnail-popup" href="{{url('/')}}/img/photos/events12.jpg"><img src="{{url('/')}}/img/photos/cropped/events12.jpg" class="img-responsive center-block" alt="Event page photo 12" /></a>
+        </div>
+        <div class="item">
+            <a class="slideshow-link thumbnail-popup" href="{{url('/')}}/img/photos/events13.jpg"><img src="{{url('/')}}/img/photos/cropped/events13.jpg" class="img-responsive center-block" alt="Event page photo 13" /></a>
+        </div>
+        <div class="item">
+            <a class="slideshow-link thumbnail-popup" href="{{url('/')}}/img/photos/events14.jpg"><img src="{{url('/')}}/img/photos/cropped/events14.jpg" class="img-responsive center-block" alt="Event page photo 14" /></a>
         </div>
     </div>
-    <div class="clearfix visible-xs"></div>
+</div>
+<div class="clearfix visible-xs"></div>
 
 <p>Do you have a church youth group, scout troop, fraternity or sorority, or employee group looking for a fun and affordable event?   What about a unique birthday party for your son or daughter? Booking the maze at Four Green Fields is just what you're looking for.   After all, what could be better than spending time outside in the beautiful Michigan fall weather?  If you just want to book a hay ride or sleigh ride without doing the maze, click on the <a href="{{url('/')}}/rides">Hay &amp; Sleigh Rides</a> page for details.</p>
 
@@ -171,6 +170,7 @@
 @stop
 
 @section('scripts')
+<script type="text/javascript" src="{{ elixir('js/slideshow.js') }}"></script>
 <script>
 $(document).ready(function()
 {

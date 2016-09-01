@@ -122,6 +122,7 @@ a {
     // Ex: (12px small font / 14px base font) * 100% = about 85%
     font-size: floor((100% * $font-size-small / $font-size-base));
     color: $gray-light;
+    margin: 0 0 ($line-height-computed / 2);
 }
 
 /* Spacing Elements */
@@ -145,6 +146,7 @@ $top-space-vars: (0 top top, 5 top top, 10 top top, 15 top top, 25 top top, 30 t
 /* Image Styling */
 .img-left-sm {
     width: 100%;
+    margin: 0 0 ($line-height-computed / 2);
     @media (min-width: $screen-sm-min) {
         width: auto;
         float: left; 
@@ -153,6 +155,7 @@ $top-space-vars: (0 top top, 5 top top, 10 top top, 15 top top, 25 top top, 30 t
 }
 .img-right-sm {
     width: 100%;
+    margin: 0 0 ($line-height-computed / 2);
     @media (min-width: $screen-sm-min) {
         width: auto;
         float: right;
@@ -165,6 +168,69 @@ $top-space-vars: (0 top top, 5 top top, 10 top top, 15 top top, 25 top top, 30 t
 }
 .img-width-300 {
     max-width: 300px;
+}
+.img-width-650 {
+    max-width: 650px;
+}
+.img-width-800 {
+    max-width: 800px;
+}
+
+/* Slideshow */
+.slideshow {
+    @extend .img-border;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    .item {
+        display: none;
+        &:first-child {
+            display: block;
+        }
+    }
+    &.slick-initialized .item {
+        display: block;
+    }
+    .slideshow-prev, .slideshow-next {
+        /*font-size: 20px;*/
+        position: absolute;
+        top: 0;
+        display: block;
+        width: 53px;
+        height: 100%;
+        z-index: 20;
+        .fa.fa-circle {
+            color: #FFF;
+            border-radius: 50%;
+
+        }
+        &:hover .fa.fa-circle {
+            background-color: $lynch;
+            -webkit-transition: background-color 1s linear;
+            -moz-transition: background-color 1s linear;
+            -o-transition: background-color 1s linear;
+            -ms-transition: background-color 1s linear;
+            transition: background-color 1s linear;
+        }
+        &:focus {
+            outline: 0;
+        }
+    }
+    .slideshow-prev {
+        left: 0;
+        .fa-angle-left {
+            left: -2px;
+            top: -1px;
+        }
+    }
+    .slideshow-next {
+        right: 0;
+        .fa-angle-left {
+            right: -2px;
+            top: -1px;
+        }
+
+    }
 }
 
 /* Color Swatches */
@@ -208,9 +274,8 @@ $top-space-vars: (0 top top, 5 top top, 10 top top, 15 top top, 25 top top, 30 t
     }
 }
 .details {
-    color: #666;
+    color: $gray-light;
 }
-
 
 /* Header */
 header.header {
@@ -292,7 +357,7 @@ nav.navbar {
                 float: none;
                 display: inline-block;
             }
-            &.active a {
+            &.active > a {
                 background-color: $nav-link-hover-bg;
             }
         }
@@ -346,54 +411,6 @@ footer.footer {
 .modal-content {
     border-radius: 0;
     @include shadow-2();
-}
-
-/* Slideshow */
-.slideshow {
-    max-width: 800px;
-    max-height: 300px;
-    overflow: hidden;
-    margin: 0 auto 20px auto;
-    .slideshow-prev, .slideshow-next {
-        /*font-size: 20px;*/
-        position: absolute;
-        top: 0;
-        display: block;
-        width: 53px;
-        height: 100%;
-        z-index: 20;
-        .fa.fa-circle {
-            color: #FFF;
-            border-radius: 50%;
-
-        }
-        &:hover .fa.fa-circle {
-            background-color: $lynch;
-            -webkit-transition: background-color 1s linear;
-            -moz-transition: background-color 1s linear;
-            -o-transition: background-color 1s linear;
-            -ms-transition: background-color 1s linear;
-            transition: background-color 1s linear;
-        }
-        &:focus {
-            outline: 0;
-        }
-    }
-    .slideshow-prev {
-        left: 0;
-        .fa-angle-left {
-            left: -2px;
-            top: -1px;
-        }
-    }
-    .slideshow-next {
-        right: 0;
-        .fa-angle-left {
-            right: -2px;
-            top: -1px;
-        }
-
-    }
 }
 
 /* Hours and Prices */

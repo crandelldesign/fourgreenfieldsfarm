@@ -17,11 +17,11 @@
 
 <div>
 <a class="thumbnail-popup" href="{{url('/')}}/img/photos/building_a_maze_img_0.jpg"><img src="{{url('/')}}/img/photos/cropped/building_a_maze_img_0.jpg" alt="The farmer's daughters" class="img-responsive center-block img-border" /></a>
-<p class="text-center caption">The farmer's daughters measuring out a portion of the maze.</p>
+<div class="text-center caption">The farmer's daughters measuring out a portion of the maze.</div>
 </div>
 
-<div class="pull-left margin-right-15 margin-bottom-15 img-group img-aside-sm">
-<p><a class="thumbnail-popup" href="{{url('/')}}/img/photos/building_a_maze_img_1.jpg"><img src="{{url('/')}}/img/photos/cropped/building_a_maze_img_1.jpg" class="img-responsive center-block" alt="maze" /></a></p>
+<div class="img-left-sm text-center">
+<p><a class="thumbnail-popup" href="{{url('/')}}/img/photos/building_a_maze_img_1.jpg"><img src="{{url('/')}}/img/photos/cropped/building_a_maze_img_1.jpg" class="img-responsive center-block img-border" alt="maze" /></a></p>
 </div>
 <div class="clearfix visible-xs"></div>
 
@@ -29,15 +29,15 @@
 
 <p>We then go over the paths with a rotto-tiller that fits on the same small tractor.  This smoothes the trails and chews up the corn stalks so they don't grow back.</p>
 
-<div class="pull-right margin-left-15 margin-bottom-15 img-group img-aside-sm">
-<p><a class="thumbnail-popup" href="{{url('/')}}/img/photos/building_a_maze_img_2.jpg"><img src="{{url('/')}}/img/photos/cropped/building_a_maze_img_2.jpg" class="img-responsive center-block" alt="maze" /></a></p>
-<p class="caption text-center">The same path after rotto-tilling.</p>
+<div class="img-right-sm text-center">
+<p><a class="thumbnail-popup" href="{{url('/')}}/img/photos/building_a_maze_img_2.jpg"><img src="{{url('/')}}/img/photos/cropped/building_a_maze_img_2.jpg" class="img-responsive center-block img-border" alt="maze" /></a></p>
+<div class="caption text-center">The same path after rotto-tilling.</div>
 </div>
 <div class="clearfix"></div>
 
 <p>A final leveling of the trails is done with a drag (old wood pallet) pulled by a four wheeled ATV, the loose rocks are picked up, and all that is left is to wait for the corn to finish growing.</p>
 
-<div>
+<div class="img-width-650 center-block">
 <a class="thumbnail-popup" href="{{url('/')}}/img/photos/building_a_maze_img_3.jpg"><img src="{{url('/')}}/img/photos/cropped/building_a_maze_img_3.jpg" alt="Building the Maze 3" class="img-responsive center-block img-border" /></a>
 <p class="text-center caption">One of the farmers daughters at work picking up rocks.  Great workout and cheaper than any of the local health clubs.  The rocks get used to prevent erosion along a drainage ditch so we get double value out of the work.</p>
 </div>

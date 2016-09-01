@@ -7,24 +7,23 @@
 
 <h1>Haunted Maze</h1>
 
-<div id="slideshow1" class="slideshow carousel slide margin-bottom-15" data-ride="carousel">
-	<div class="carousel-inner">
-		<div class="item active">
-	    	<p><a class="slideshow-link thumbnail-popup" href="{{url('/')}}/img/photos/haunted1.jpg"><img class="img-responsive center-block" src="{{url('/')}}/img/photos/cropped/haunted1.jpg" /></a></p>
-	    </div>
-	    <div class="item">
-	    	<p><a class="slideshow-link thumbnail-popup" href="{{url('/')}}/img/photos/haunted2.jpg"><img class="img-responsive center-block" src="{{url('/')}}/img/photos/cropped/haunted2.jpg" /></a></p>
-	    </div>
-	    <div class="item">
-	    	<p><a class="slideshow-link thumbnail-popup" href="{{url('/')}}/img/photos/haunted3.jpg"><img class="img-responsive center-block" src="{{url('/')}}/img/photos/cropped/haunted3.jpg" /></a></p>
-	    </div>
-	    <div class="item">
-	    	<p><a class="slideshow-link thumbnail-popup" href="{{url('/')}}/img/photos/haunted4.jpg"><img class="img-responsive center-block" src="{{url('/')}}/img/photos/cropped/haunted4.jpg" /></a></p>
-	    </div>
-	    <div class="item">
-	    	<p><a class="slideshow-link thumbnail-popup" href="{{url('/')}}/img/photos/haunted5.jpg"><img class="img-responsive center-block" src="{{url('/')}}/img/photos/cropped/haunted5.jpg" /></a></p>
-	    </div>
-	</div>
+<div class="slideshow img-width-800 margin-bottom-15">
+	<div class="arrows"></div>
+	<div class="item active">
+    	<a class="slideshow-link thumbnail-popup" href="{{url('/')}}/img/photos/haunted1.jpg"><img class="img-responsive center-block" src="{{url('/')}}/img/photos/cropped/haunted1.jpg" alt="Photo of Haunted Maze 1" /></a>
+    </div>
+    <div class="item">
+    	<a class="slideshow-link thumbnail-popup" href="{{url('/')}}/img/photos/haunted2.jpg"><img class="img-responsive center-block" src="{{url('/')}}/img/photos/cropped/haunted2.jpg" alt="Photo of Haunted Maze 2" /></a>
+    </div>
+    <div class="item">
+    	<a class="slideshow-link thumbnail-popup" href="{{url('/')}}/img/photos/haunted3.jpg"><img class="img-responsive center-block" src="{{url('/')}}/img/photos/cropped/haunted3.jpg" alt="Photo of Haunted Maze 3" /></a>
+    </div>
+    <div class="item">
+    	<a class="slideshow-link thumbnail-popup" href="{{url('/')}}/img/photos/haunted4.jpg"><img class="img-responsive center-block" src="{{url('/')}}/img/photos/cropped/haunted4.jpg" alt="Photo of Haunted Maze 4" /></a>
+    </div>
+    <div class="item">
+    	<a class="slideshow-link thumbnail-popup" href="{{url('/')}}/img/photos/haunted5.jpg"><img class="img-responsive center-block" src="{{url('/')}}/img/photos/cropped/haunted5.jpg" alt="Photo of Haunted Maze 5" /></a>
+    </div>
 </div>
 
 <p>It is a pleasant fall evening and there is not a star in the sky.  You hear the faint rustling of the corn stalks and you walk down a very dark path with just a small flashlight to guide you and your friends.  You don't know why but your heart is beating just a little faster and you can feel a bead of sweat on your forehead.   Suddenly from behind you comes a blood chilling scream and your first instinct is to run, but where?  After all what's in front of you might be worse than what's behind you.</p>
@@ -37,4 +36,8 @@
 
 <p>The cost of the Haunted Maze is just $4.  You won't find this much fun at this price anywhere in Big Rapids.</p>
 
+@stop
+
+@section('scripts')
+<script type="text/javascript" src="{{ elixir('js/slideshow.js') }}"></script>
 @stop
