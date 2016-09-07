@@ -28,21 +28,6 @@
 		</div>
 	</div>
 	<div class="col-sm-6 margin-bottom-15">
-<<<<<<< HEAD:app/views/home/maple-syrup.blade.php
-		<!--<div id="slideshow2" class="slideshow carousel slide" data-ride="carousel">
-			<div class="carousel-inner">
-				 <div class="item active">
-			    	<a class="slideshow-link3" data-featherlight="image" href="{{url('/')}}/img/photos/syrup3.jpg"><img src="{{url('/')}}/img/photos/cropped/syrup3.jpg" class="img-responsive" /></a>
-			    </div>
-			    <div class="item">
-			    	<a class="slideshow-link6" data-featherlight="image" href="{{url('/')}}/img/photos/syrup6.jpg"><img src="{{url('/')}}/img/photos/cropped/syrup6.jpg" class="img-responsive" /></a>
-			    </div>
-		    </div>
-		</div>-->
-		<div class="item active">
-	    	<a class="slideshow-link3" data-featherlight="image" href="{{url('/')}}/img/photos/syrup3.jpg"><img src="{{url('/')}}/img/photos/cropped/syrup3.jpg" class="img-responsive" /></a>
-	    </div>
-=======
 		<a class="slideshow-link3 thumbnail-popup" href="{{url('/')}}/img/photos/syrup3.jpg"><img src="{{url('/')}}/img/photos/cropped/syrup3.jpg" class="img-responsive img-border" alt="Making Maple Syrup 3" /></a>
 		<!--<div class="slideshow">
 			<div class="arrows"></div>
@@ -53,7 +38,6 @@
 		    	<a class="slideshow-link6 thumbnail-popup" href="{{url('/')}}/img/photos/syrup6.jpg"><img src="{{url('/')}}/img/photos/cropped/syrup6.jpg" class="img-responsive" alt="Making Maple Syrup 4" /></a>
 		    </div>
 		</div>-->
->>>>>>> 5.1:resources/views/home/maple-syrup.blade.php
 	</div>
 </div>
 <div class="clearfix"></div>
