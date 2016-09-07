@@ -1,0 +1,527 @@
+@import 'https://fonts.googleapis.com/css?family=Cardo:400,400i,700|Lato:100,100i,300,300i,400,400i,700,700i,900,900i';
+@import 'mixins';
+@import 'variables';
+@import 'bootstrap';
+@import 'font-awesome';
+@import 'slick.scss';
+
+/* Body Styles */
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: $footer-height;
+    font-family: 'Lato', sans-serif;
+    color: $black;
+    @media (min-width: $screen-md-min) {
+        background: url('/img/background.jpg') no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    @media (min-width: $screen-md-min) {
+        //font-size: 16px;
+        line-height: 1.5;
+    }
+}
+.page {
+    padding: 15px;
+    position: relative;
+    background: #FFF;
+    @media (min-width: $screen-sm-min) {
+        padding: 25px;
+        margin: 15px;
+        @include shadow-2();
+    }
+    @media (min-width: 1300px) {
+        @include page-width();
+    }
+    > .corner-art {
+        position: absolute;
+        height: 25px;
+        width: 25px;
+        @media (min-width: $screen-sm-min) {
+            height: 50px;
+            width: 50px;
+        }
+        &.top-left {
+            top: 5px;
+            left: 5px;
+            background: url('/img/corner-art-top-left.svg') no-repeat;
+            background-size: contain;
+        }
+        &.top-right {
+            top: 5px;
+            right: 5px;
+            background: url('/img/corner-art-top-right.svg') no-repeat;
+            background-size: contain;
+        }
+        &.bottom-left {
+            bottom: 5px;
+            left: 5px;
+            background: url('/img/corner-art-bottom-left.svg') no-repeat;
+            background-size: contain;
+        }
+        &.bottom-right {
+            bottom: 5px;
+            right: 5px;
+            background: url('/img/corner-art-bottom-right.svg') no-repeat;
+            background-size: contain;
+        }
+
+    }
+}
+.content {
+    > h1:first-child {
+        margin-top: 0;
+        @media (min-width: $screen-sm-min) {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+/* Typography and Colors */
+h1 {
+    font-family: 'Cardo', serif;
+    color: $camarone;
+}
+h2 {
+    font-family: 'Cardo', serif;
+    color: $pirategold;
+}
+h3 {
+    font-family: 'Cardo', serif;
+    color: $holly;
+}
+a {
+    &.hover {
+        color: $balihai;
+        text-decoration: none;
+    }
+}
+.btn-camarone {
+    background-color: $camarone;
+    color: #FFF;
+    &:hover {
+        background-color: $greenhaze;
+        color: #FFF;
+    }
+}
+.btn-lynch {
+    background-color: $lynch;
+    color: #FFF;
+    &:hover {
+        background-color: $balihai;
+        color: #FFF;
+    }
+}
+.caption {
+    // Ex: (12px small font / 14px base font) * 100% = about 85%
+    font-size: floor((100% * $font-size-small / $font-size-base));
+    color: $gray-light;
+    margin: 0 0 ($line-height-computed / 2);
+}
+
+/* Spacing Elements */
+@mixin generate-spacing-classes(
+    $default-space-amounts-with-direction: (0 left left, 5 left left, 10 left left, 15 left left, 25 left left, 30 left left)
+) {
+    @each $space in $default-space-amounts-with-direction {
+        .margin-#{nth($space, 3)}-#{nth($space, 1)} {
+            margin-#{nth($space, 2)}: #{nth($space, 1)}px;
+        }
+    }
+}
+$right-space-vars: (0 right right, 5 right right, 10 right right, 15 right right, 25 right right, 30 right right);
+$bottom-space-vars: (0 bottom bottom, 5 bottom bottom, 10 bottom bottom, 15 bottom bottom, 25 bottom bottom, 30 bottom bottom);
+$top-space-vars: (0 top top, 5 top top, 10 top top, 15 top top, 25 top top, 30 top top);
+@include generate-spacing-classes(); // left comes by default
+@include generate-spacing-classes($right-space-vars);
+@include generate-spacing-classes($bottom-space-vars);
+@include generate-spacing-classes($top-space-vars);
+
+/* Image Styling */
+.img-left-sm {
+    width: 100%;
+    margin: 0 0 ($line-height-computed / 2);
+    @media (min-width: $screen-sm-min) {
+        width: auto;
+        float: left; 
+        margin: 0 1em 1em 0;
+    }
+}
+.img-right-sm {
+    width: 100%;
+    margin: 0 0 ($line-height-computed / 2);
+    @media (min-width: $screen-sm-min) {
+        width: auto;
+        float: right;
+        margin: 0 0 1em 1em;
+    }
+}
+.img-border {
+    border: 4px solid $camarone;
+    @include shadow-1();
+}
+.img-width-300 {
+    max-width: 300px;
+}
+.img-width-650 {
+    max-width: 650px;
+}
+.img-width-800 {
+    max-width: 800px;
+}
+
+/* Slideshow */
+.slideshow {
+    @extend .img-border;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    .item {
+        display: none;
+        &:first-child {
+            display: block;
+        }
+    }
+    &.slick-initialized .item {
+        display: block;
+    }
+    .slideshow-prev, .slideshow-next {
+        /*font-size: 20px;*/
+        position: absolute;
+        top: 0;
+        display: block;
+        width: 53px;
+        height: 100%;
+        z-index: 20;
+        .fa.fa-circle {
+            color: #FFF;
+            border-radius: 50%;
+
+        }
+        &:hover .fa.fa-circle {
+            background-color: $lynch;
+            -webkit-transition: background-color 1s linear;
+            -moz-transition: background-color 1s linear;
+            -o-transition: background-color 1s linear;
+            -ms-transition: background-color 1s linear;
+            transition: background-color 1s linear;
+        }
+        &:focus {
+            outline: 0;
+        }
+    }
+    .slideshow-prev {
+        left: 0;
+        .fa-angle-left {
+            left: -2px;
+            top: -1px;
+        }
+    }
+    .slideshow-next {
+        right: 0;
+        .fa-angle-left {
+            right: -2px;
+            top: -1px;
+        }
+
+    }
+}
+
+/* Color Swatches */
+.color-swatch {
+    height: 100px;
+    @include shadow-3();
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 5px solid #FFF;
+    color: #FFF;
+    background-color: #eee;
+    &.swatch1 {
+        background-color: $camarone;
+    }
+    &.swatch2 {
+        background-color: $greenhaze;
+    }
+    &.swatch3 {
+        background-color: $holly;
+    }
+    &.swatch4 {
+        background-color: $supernova;
+    }
+    &.swatch5 {
+        background-color: $mustard;
+    }
+    &.swatch6 {
+        background-color: $pirategold;
+    }
+    &.swatch7 {
+        background-color: $lynch;
+    }
+    &.swatch8 {
+        background-color: $balihai;
+    }
+    &.swatch9 {
+        background-color: $fiord;
+    }
+    &.swatch10 {
+        background-color: $black;
+    }
+}
+.details {
+    color: $gray-light;
+}
+
+/* Header */
+header.header {
+    position: relative;
+    background: #FFF;
+    @media (min-width: $screen-sm-min) {
+        padding: 25px 50px 0;
+        margin: 15px;
+        @include shadow-2();
+    }
+    @media (min-width: 1300px) {
+        @include page-width();
+    }
+    .logo-container {
+        max-width: 400px;
+    }
+    .header-slogan {
+        p {
+            margin-bottom: 2px;
+            color: $camarone;
+            font-family: $font-family-serif;
+        }
+    }
+    > .corner-art {
+        position: absolute;
+        height: 25px;
+        width: 25px;
+        @media (min-width: $screen-sm-min) {
+            height: 50px;
+            width: 50px;
+        }
+        &.top-left {
+            top: 5px;
+            left: 5px;
+            background: url('/img/corner-art-top-left.svg') no-repeat;
+            background-size: contain;
+        }
+        &.top-right {
+            top: 5px;
+            right: 5px;
+            background: url('/img/corner-art-top-right.svg') no-repeat;
+            background-size: contain;
+        }
+        &.bottom-left {
+            bottom: 5px;
+            left: 5px;
+            background: url('/img/corner-art-bottom-left.svg') no-repeat;
+            background-size: contain;
+        }
+        &.bottom-right {
+            bottom: 5px;
+            right: 5px;
+            background: url('/img/corner-art-bottom-right.svg') no-repeat;
+            background-size: contain;
+        }
+    }
+}
+nav.navbar {
+    border: 0;
+    @media (min-width: $screen-sm-min) {
+        min-height: 0;
+        margin-top: 15px;
+        border-top: 1px solid $holly;
+    }
+    .navbar-brand {
+        img {
+            max-width: 200px;
+        }
+    }
+    .nav.navbar-nav {
+        margin-bottom: 30px;
+        @media (min-width: $screen-sm-min) {
+            margin-bottom: 0;
+            float: none;
+            text-align: center;
+        }
+        > li {
+            @media (min-width: $screen-sm-min) {
+                float: none;
+                display: inline-block;
+            }
+            &.active > a {
+                background-color: $nav-link-hover-bg;
+            }
+        }
+    }
+    a {
+        font-family: $font-family-serif;
+        color: $camarone;
+        @media (min-width: $screen-md-min) {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        @media (min-width: 1300px) {
+            font-size: 20px;
+        }
+        &:hover {
+            color: $holly;
+        }
+    }
+    .navbar-toggle {
+        border-color: $camarone;
+        background-color: $supernova;
+        .icon-bar {
+            background-color: $camarone;
+        }
+    }
+}
+
+/* Footer */
+footer.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: $footer-height;
+    overflow: hidden;
+    text-align: center;
+    font-size: 10px;
+    @media (min-width: $screen-sm-min) {
+        font-size: 12px;
+        color: #FFF;
+    }
+    > .container-fluid {
+        @include page-width();
+        padding: 15px;
+    }
+    p {
+        margin-bottom: 2px;
+    }
+}
+
+/* Modals */
+.modal-content {
+    border-radius: 0;
+    @include shadow-2();
+}
+
+/* Hours and Prices */
+.hours-prices .table > tbody > tr > th {
+    width: 50%;
+}
+
+/* Events */
+.calendar-page {
+    position: relative;
+    .calendar-overlay {
+        display: none;
+        position: absolute;
+        z-index: 20;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        background: #FFF;
+        opacity: .50;
+        text-align: center;
+        padding: 100px;
+        &.loading {
+            display: block;
+        }
+    }
+    .calendar {
+        >thead>tr>th {
+            font-size: 12px;
+            padding-left: 5px;
+            padding-right: 5px;
+            @media (min-width: $screen-sm-min) {
+                font-size: 14px;
+            }
+        }
+        td {
+            width: (100% / 7);
+            padding: 8px 3px;
+            @media (min-width: $screen-sm-min) {
+                padding: 8px;
+                height: 80px;
+            }
+            &.has-event {  
+                cursor: pointer;
+                &:hover {
+                    background-color: #f5f5f5;
+                }
+            }
+            a.cal-event {
+                display: block;
+                font-size: 8px;
+                margin-bottom: 5px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                max-width: 30px;
+                @media (min-width: $screen-sm-min) {
+                    font-size: 10px;
+                    white-space: normal;
+                    max-width: none;
+                    .event-title {
+                        font-size: 11px;
+                    }
+                }
+                &:hover {
+                    color: $link-hover-color;
+                }
+            }
+        }
+    }
+}
+#event-modal {
+    .event-panel {
+        .panel-heading {
+            position: relative;
+            padding-left: 30px;
+            a.see-more-left {
+                position: absolute;
+                left: 10px;
+                @include rotate-icon();
+                color: $link-hover-color;
+            }
+            .more-info {
+                font-size: 12px;
+                margin-top: 5px;
+                .event-time, .event-see-more {
+                    margin-right: 8px;
+                    @media (min-width: $screen-sm-min) {
+                        float: left;
+                    }
+                }
+                .event-time {
+                    padding: 6px 0;
+                }
+                .event-see-more {
+                    //padding: 6px 12px;
+                }
+                > div:first-child {
+                    padding-left: 0;
+                }
+            }
+        }
+        .panel-body {
+            border-bottom: 0;
+        }
+        box-shadow: none;
+        border: 0;
+        border-radius: 0;
+        border-bottom: 1px solid $gray;
+        &:last-child {
+            border-bottom: 0;
+        }
+    }
+}

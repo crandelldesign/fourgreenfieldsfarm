@@ -1,0 +1,5 @@
+suites:
+    main:
+        namespace: fourgreenfieldsfarm
+        psr4_prefix: fourgreenfieldsfarm
+        src_path: app
