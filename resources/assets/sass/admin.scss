@@ -3,20 +3,26 @@
 @import 'bootstrap';
 @import 'font-awesome';
 @import 'bootstrap-datetimepicker';
+
+/* Admin Variabled */
+$navbar-height: 50px;
+
 @import 'adminlte/adminlte';
 @import 'adminlte/skins/skin-green';
 
 /* Login Page */
 .login-page, .register-page {
     background: $balihai;
-    a {
+    a, a:hover, a:focus {
     	color: #FFF;
     }
 }
 
 /* Header */
-.main-header .logo {
-	font-size: 15px;
+.main-header {
+	.logo {
+		font-size: 15px;
+	}
 }
 
 /* Sidebar */
@@ -293,4 +299,4 @@ $top-space-vars: (0 top top, 5 top top, 10 top top, 15 top top, 25 top top, 30 t
     		margin-right: 0;
 		}
 	}
-} 
+}
