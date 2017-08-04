@@ -106,5 +106,6 @@ return [
     */
 
     'attributes' => [],
+    'recaptcha' => 'ReCaptcha has failed. Please try again.'
 
 ];

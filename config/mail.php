@@ -54,7 +54,7 @@ return [
     |
     */
 
-    'from' => ['address' => null, 'name' => null],
+    'from' => ['address' => 'postmaster@mailgun.fourgreenfieldsfarm.com', 'name' => 'Four Green Fields Farm Website',],
 
     /*
     |--------------------------------------------------------------------------

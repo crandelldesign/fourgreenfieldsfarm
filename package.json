@@ -2,8 +2,8 @@
   "private": true,
   "devDependencies": {
     "bootstrap-sass": "^3.3.7",
-    "font-awesome": "^4.6.0",
     "eonasdan-bootstrap-datetimepicker": "^4.17.42",
+    "font-awesome": "^4.7.0",
     "gulp": "^3.9.1",
     "handlebars": "^4.0.5",
     "moment": "^2.13.0",

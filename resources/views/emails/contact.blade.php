@@ -27,14 +27,14 @@
         /* General styling */
         td {
             font-family: Arial, sans-serif;
-            color: #6f6f6f;
+            color: #252525;
         }
         body {
             -webkit-font-smoothing:antialiased;
             -webkit-text-size-adjust:none;
             width: 100%;
             height: 100%;
-            color: #6f6f6f;
+            color: #252525;
             font-weight: 400;
             font-size: 18px;
         }
@@ -121,10 +121,10 @@
         }
     </style>
 </head>
-<body class="body" style="padding:0; margin:0; display:block; background:#00746b; -webkit-text-size-adjust:none;" bgcolor="#00746b">
+<body class="body" style="padding:0; margin:0; display:block; background:#647b97; -webkit-text-size-adjust:none;" bgcolor="#647b97">
 <table align="center" cellpadding="0" cellspacing="0" width="100%">
   <tr>
-    <td align="center" valign="top" style="background-color:#00746b" width="100%">
+    <td align="center" valign="top" style="background-color:#647b97" width="100%">
 
     <center>
 
@@ -135,20 +135,20 @@
 
           <table style="margin:0 auto;" cellspacing="0" cellpadding="0" width="100%">
             <tr>
-              <td style="text-align: center; padding: 15px; background-color: #003366">
-                <a href="#"><img class="w500" width="500" height="89" src="http://crandellhosting.com/images/christwaterford-logo.png" alt="Christ Lutheran Church of Waterford" /></a>
+              <td style="text-align: center; padding: 15px; background-color: #FFFFFF">
+                <a href="#"><img class="w680" width="600" height="158" src="http://crandellhosting.com/images/four-green-fields-farm-logo-email.jpg" alt="Four Green Fields Farm" /></a>
               </td>
             </tr>
           </table>
 
 
-          <table cellspacing="0" cellpadding="0" class="force-full-width" style="background-color:#FFFFFF; width: 100%">
+          <table cellspacing="0" cellpadding="0" class="force-full-width" style="background-color:#005a2c; width: 100%">
             <tr>
-              <td style="background-color:#FFFFFF;">
+              <td style="background-color:#005a2c;">
 
                 <table cellspacing="0" cellpadding="0" class="force-full-width" style="width: 100%">
                   <tr>
-                    <td style="font-size:25px; font-weight: 600; color: #003366; text-align:center; padding: 15px 0; width: 100%" class="mobile-spacing">
+                    <td style="font-size:25px; font-weight: 600; color: #FFFFFF; text-align:center; padding: 15px 0; width: 100%" class="mobile-spacing">
                     <!--<div class="mobile-br">&nbsp;</div>-->
                         You've Been Contacted by {{isset($name)?$name:'Name'}}
                     <br/>
@@ -179,6 +179,7 @@
                     <br>
                     <strong>Name:</strong> {{isset($name)?$name:''}}<br>
                     <strong>Email:</strong> {{isset($email)?$email:''}}<br>
+                    <strong>Phone:</strong> {{isset($phone)?$phone:''}}<br>
                     <br>
                     <div>{{isset($name)?$name:''}} writes... {{isset($message_text)?$message_text:''}}</div>
                     </td>
@@ -187,7 +188,7 @@
 
                 <table cellspacing="0" cellpadding="0" bgcolor="#FFFFFF" class="force-full-width" style="width: 100%">
                   <tr>
-                    <td style="color:#1a4b68; font-size: 14px; text-align:center; padding:10px; width: 100%; background-color: #FFFFFF">
+                    <td style="color:#005a2c; font-size: 14px; text-align:center; padding:10px; width: 100%; background-color: #FFFFFF">
                       &copy; {{date('Y')}} All Rights Reserved
                     </td>
                   </tr>

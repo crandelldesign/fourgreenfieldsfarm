@@ -10418,4 +10418,96 @@ $(document).ready(function()
         $(this).closest('.slideshow').slick('slickPause');
     });
 });
+
+// Map
+function initMap() {
+    var location = {lat: 43.707156, lng: -85.397277};
+    var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 13,
+        center: location,
+        scrollwheel: false,
+        styles: [
+            {
+                "featureType": "poi",
+                "elementType": "all",
+                "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                ]
+            },
+            {
+                "featureType": "poi",
+                "elementType": "geometry.fill",
+                "stylers": [
+                    {
+                        "color": "#C5E3BF"
+                    }
+                ]
+            },
+            {
+                "featureType": "road",
+                "elementType": "geometry",
+                "stylers": [
+                    {
+                        "lightness": 100
+                    },
+                    {
+                        "visibility": "simplified"
+                    }
+                ]
+            },
+            {
+                "featureType": "road",
+                "elementType": "geometry.fill",
+                "stylers": [
+                    {
+                        "color": "#D1D1B8"
+                    }
+                ]
+            },
+            {
+                "featureType": "water",
+                "elementType": "geometry",
+                "stylers": [
+                    {
+                        "visibility": "on"
+                    },
+                    {
+                        "color": "#C6E2FF"
+                    }
+                ]
+            },
+            {
+                "featureType": "water",
+                "elementType": "geometry.fill",
+                "stylers": [
+                    {
+                        "color": "#647b97"
+                    }
+                ]
+            }
+        ]
+    });
+    var infowindow = new google.maps.InfoWindow();
+    var service = new google.maps.places.PlacesService(map);
+
+    service.getDetails({
+      placeId: 'ChIJC2nYWqU0H4gRRItb5sFDz6U'
+    }, function(place, status) {
+      if (status === google.maps.places.PlacesServiceStatus.OK) {
+        var marker = new google.maps.Marker({
+          map: map,
+          position: place.geometry.location
+        });
+        google.maps.event.addListener(marker, 'click', function() {
+            infowindow.setContent('<div><strong>' + place.name + '</strong><br>' +
+            place.formatted_address + '<br>'+
+            '<a href="'+place.url+'" target="_blank">View on Google Maps</a>'+'</div>');
+            infowindow.open(map, this);
+        });
+      }
+    });
+}
+
 //# sourceMappingURL=default.js.map

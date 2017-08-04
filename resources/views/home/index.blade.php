@@ -1,6 +1,7 @@
 @extends('layouts.default')
 
 @section('head')
+<script src='https://www.google.com/recaptcha/api.js'></script>
 @stop
 
 @section('content')
@@ -25,9 +26,7 @@
 
 <hr />
 
-<h2>Four Green Fields Farm Corn Maze</h2>
-<p>Rodney, MI 49342</p>
-<p><strong>FUN FOR ALL AGES</strong></p>
+<h2>Four Green Fields Farm Corn Maze<br><small>FUN FOR ALL AGES</small></h2>
 <div class="row hours-prices">
     <div class="col-sm-6 col-md-5">
         <h3>Corn Maze</h3>
@@ -82,12 +81,88 @@
 <p>Admission: $3. Kids under 5 are FREE! Horse Drawn Wagon Rides $2</p>
 <h3>Haunted Maze</h3>
 <p>Open Friday and Saturday nights from 8 to 10:30pm October 9th to 31st.</p>
-<p>Admission: $4</p>-->
-<p class="text-center">PRIVATE GROUP BOOKINGS AVAILABLE!</p>
+<p>Admission: $4</p>
+<p class="text-center">PRIVATE GROUP BOOKINGS AVAILABLE!</p>-->
 
-<h3>Contact</h3>
-<p><i class="fa fa-phone-square" aria-hidden="true"></i> 231-580-1463 and ask for Kevin<br>
-    <i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:fourgreenfieldsman@yahoo.com">fourgreenfieldsman@yahoo.com</a></p>
+<hr>
+
+<h2>Contact</h2>
+<div class="row">
+    <div class="col-sm-6 col-md-4">
+        <ul class="fa-ul">
+            <li><i class="fa-li fa fa-phone-square" aria-hidden="true"></i> 231-580-1463 and ask for Kevin</li>
+            <li><i class="fa-li fa fa-envelope" aria-hidden="true"></i>  <a href="mailto:fourgreenfieldsman@yahoo.com">fourgreenfieldsman@yahoo.com</a></li>
+            <li><i class="fa-li fa fa-map-marker" aria-hidden="true"></i> <address itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                <span itemprop="streetAddress">15693 Wilson Road</span><br>
+                <span itemprop="addressLocality">Rodney</span>,
+                <span itemprop="addressRegion">MI</span>
+                <span itemprop="postalCode">49342</span>
+            </address></li>
+        </ul>
+        <!--<p><i class="fa fa-phone-square" aria-hidden="true"></i> 231-580-1463 and ask for Kevin<br>
+            <i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:fourgreenfieldsman@yahoo.com">fourgreenfieldsman@yahoo.com</a></p>-->
+    </div>
+    <div class="col-sm-6 col-md-8">
+        <form id="contact-form" class="form" action="{{url('/')}}#contact-form" method="post" autocomplete="off">
+            @if (session('status'))
+                <div class="alert alert-success">
+                    {{ session('status') }}
+                </div>
+            @endif
+            @if (count($errors) > 0)
+                <div class="alert alert-danger">Please correct the errors in red below.</div>
+            @endif
+            <div class="form-group form-group-sm {{($errors->has('name'))?'has-error':''}}">
+                <label class="control-label" for="name">Name</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Name" value="{{old('name')}}">
+                @foreach ($errors->get('name') as $error)
+                    <div class="help-block with-errors">{{ $error }}</div>
+                @endforeach
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group form-group-sm {{($errors->has('email'))?'has-error':''}}">
+                        <label class="control-label" for="email">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Email" value="{{old('email')}}">
+                        @foreach ($errors->get('email') as $error)
+                            <div class="help-block with-errors">{{ $error }}</div>
+                        @endforeach
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group form-group-sm {{($errors->has('phone'))?'has-error':''}}">
+                        <label class="control-label" for="phone">Phone</label>
+                        <input type="phone" class="form-control" id="phone" name="phone" placeholder="Phone" value="{{old('phone')}}">
+                        @foreach ($errors->get('phone') as $error)
+                            <div class="help-block with-errors">{{ $error }}</div>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group form-group-sm {{($errors->has('message'))?'has-error':''}}">
+                <label class="control-label" for="message">Message</label>
+                <textarea class="form-control" rows="5" id="message" name="message" placeholder="Message">{{old('message')}}</textarea>
+                @foreach ($errors->get('message') as $error)
+                    <div class="help-block with-errors">{{ $error }}</div>
+                @endforeach
+            </div>
+            <div class="form-group form-group-sm {{(count($errors) > 0 && $errors->first('g-recaptcha-response'))?'has-error':''}}">
+                <div class="g-recaptcha" data-sitekey="{{ env('RECAPTCHA_SITEKEY') }}"></div>
+                @foreach ($errors->get('g-recaptcha-response') as $error)
+                    <div class="help-block with-errors">{{ $error }}</div>
+                @endforeach
+                @foreach ($errors->get('recaptcha') as $error)
+                    <div class="help-block with-errors">{{ $error }}</div>
+                @endforeach
+            </div>
+            {{ csrf_field() }}
+            <div class="form-group form-group-submit">
+                <button type="submit" class="btn btn-submit btn-camarone">Send</button>
+            </div>
+        </form>
+    </div>
+</div>
 
 @stop
 

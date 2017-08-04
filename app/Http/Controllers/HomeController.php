@@ -24,6 +24,53 @@ class HomeController extends Controller
         return $view;
     }
 
+    public function postIndex(Request $request)
+    {
+        $validator = $this->validate(
+            $request,
+            [
+                'name' => 'required',
+                'email' => 'required',
+                'phone' => 'required',
+                'g-recaptcha-response' => 'required|recaptcha',
+                'message' => 'required'
+            ],
+            [
+                'name.required' => 'Please enter your name.',
+                'email.required' => 'Please enter your email address.',
+                'phone.required' => 'Please enter your phone number.',
+                'g-recaptcha-response.required' => 'Please check the reCAPTCHA box.',
+                'message.required' => 'Please enter a message.'
+            ]
+        );
+
+        $data = array(
+            'name' => $request->get('name'),
+            'email' => $request->get('email'),
+            'phone' => $request->get('phone'),
+            'message_text' => $request->get('message'),
+        );
+
+        Mail::send('emails.contact', $data, function($message) use ($request)
+        {
+            $message->to('fourgreenfieldsman@yahoo.com', 'Kevin Courtney');
+            $message->bcc('matt@crandelldesign.com', 'Matt Crandell');
+            $message->replyTo($request->get('email'), $request->get('name'));
+            $message->subject('You\'ve Been Contacted by the Four Green Fields Farm Website.');
+        });
+
+        Analytics::trackEvent('Email', 'sent', 'Email Sent', 1);
+
+        return redirect('/#contact-form')->with('status', 'Thank you for contacting us, we will get back to you as soon as possible.');
+    }
+
+    public function getEmail()
+    {
+        $view = view('emails.contact');
+
+        return $view;
+    }
+
     public function getDirections()
     {
         $view = view('home.directions');
@@ -159,7 +206,7 @@ class HomeController extends Controller
 
         $month = new StdClass;
         for ($d = 1; $d <= date('t',$date); $d++)
-        {   
+        {
             $month->dates[$d] = new StdClass;
             $day = strtotime(date('F', $date).' '.$d.', '.date('Y', $date));
             $next_day = strtotime('+1 day', $day);

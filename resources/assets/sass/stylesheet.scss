@@ -124,6 +124,12 @@ a {
     color: $gray-light;
     margin: 0 0 ($line-height-computed / 2);
 }
+.form-group-sm {
+    margin-bottom: 10px;
+    .control-label {
+        font-size: 12px;
+    }
+}
 
 /* Spacing Elements */
 @mixin generate-spacing-classes(
@@ -524,4 +530,12 @@ footer.footer {
             border-bottom: 0;
         }
     }
+}
+
+// Homepage
+@import 'theme/home';
+
+// Map
+#map {
+    height: 400px;
 }
