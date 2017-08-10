@@ -9,7 +9,10 @@
 
 <div class="slideshow img-width-800 margin-bottom-15">
 	<div class="arrows"></div>
-	<div class="item active">
+    <div class="item active">
+        <a class="" href="#" data-toggle="modal" data-target="#youtube-modal-1"><img class="img-responsive center-block" src="{{url('/')}}/img/photos/heysleigh-youtube-1.jpg" alt="Hay &amp; Sleigh Rides YouTube Video" /></a>
+    </div>
+	<div class="item">
     	<a class="slideshow-link thumbnail-popup" href="{{url('/')}}/img/photos/heysleigh1.jpg"><img class="img-responsive center-block" src="{{url('/')}}/img/photos/cropped/heysleigh1.jpg" alt="Photo of Hay and Sleigh Rides 1" /></a>
     </div>
 	<div class="item">
@@ -116,6 +119,22 @@
 <p>If you'd like to combine the corn maze experience with a wagon ride, contact us for details on how you can do that. You can contact us at the email link or phone number on our home page.</p>
 
 <p>*We use the sleigh if there is enough snow and if not we used the wheeled wagon.</p>
+
+<!-- Modal -->
+<div class="modal fade" id="youtube-modal-1" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" width="853" height="480" src="https://www.youtube.com/embed/4MDSAb9MyoY" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
 
 @stop
 
