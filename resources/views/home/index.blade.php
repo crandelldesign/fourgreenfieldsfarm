@@ -132,7 +132,7 @@
                 <div class="col-sm-6">
                     <div class="form-group form-group-sm {{($errors->has('phone'))?'has-error':''}}">
                         <label class="control-label" for="phone">Phone</label>
-                        <input type="phone" class="form-control" id="phone" name="phone" placeholder="Phone" value="{{old('phone')}}">
+                        <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone" value="{{old('phone')}}">
                         @foreach ($errors->get('phone') as $error)
                             <div class="help-block with-errors">{{ $error }}</div>
                         @endforeach

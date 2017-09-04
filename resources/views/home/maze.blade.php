@@ -9,7 +9,7 @@
 <div class="slideshow img-width-650">
 	<div class="arrows"></div>
 		<div class="item active">
-	    	<a class="slideshow-link thumbnail-popup" href="{{url('/')}}/img/photos/maze-pic1.jpg"><img class="img-responsive center-block" src="{{url('/')}}/img/photos/maze-pic1.jpg" alt="Photo of Maze 1" /></a>
+	    	<a class="slideshow-link thumbnail-popup" href="{{url('/')}}/img/photos/maze-pic1@2x.jpg"><img class="img-responsive center-block" src="{{url('/')}}/img/photos/maze-pic1.jpg" srcset="{{url('/')}}/img/photos/maze-pic1@2x.jpg 2x" alt="Photo of Maze 1" /></a>
 	    </div>
 	    <div class="item">
 	    	<a class="slideshow-link thumbnail-popup" href="{{url('/')}}/img/photos/maze-pic4.jpg"><img class="img-responsive center-block" src="{{url('/')}}/img/photos/maze-pic4.jpg" alt="Photo of Maze 2" /></a>
