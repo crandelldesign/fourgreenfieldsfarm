@@ -30,7 +30,7 @@
 <div class="row hours-prices">
     <div class="col-sm-6 col-md-5">
         <h3>Corn Maze</h3>
-        <p>September 23 to October 29</p>
+        <p>September 29 to October 28</p>
         <h4>Hours</h4>
         <table class="table">
             <tr>
@@ -57,7 +57,7 @@
     </div>
     <div class="col-sm-6 col-md-5 col-md-offset-2">
         <h3>Haunted Maze</h3>
-        <p>October 7 to 29</p>
+        <p>October 5 to October 27</p>
         <h4>Hours</h4>
         <table class="table">
             <tr>
