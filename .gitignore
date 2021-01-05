@@ -10,7 +10,7 @@ sftp-config.json
 /node_modules
 /public/storage
 /.idea
-/storage
+#/storage
 Homestead.json
 Homestead.yaml
 .env
