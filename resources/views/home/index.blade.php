@@ -27,7 +27,7 @@
 
 <hr />
 
-<p>Every year we are open, we have more fun that the year before. We expect this year to be the same. Our maze, pumpkin patch, and horse drawn wagon rides all waiting for you still at the same low prices as the day we opened in 2006 (see details below). Don’t forget that on Friday and Saturday nights in October we haunt the maze for those brave souls not afraid of what lurks in a dark corn field. Want the Maze all to yourself? We love doing private group bookings. They are great for scouts, church youth groups, family outings, friends, and birthday parties. We offer you use of our picnic area, pavilion, field stone grill, and bonfire pit too. We can also accommodate groups during regular business hours so give us a call.</p>
+<p>Every year we are open, we have more fun that the year before. We expect this year to be the same. Our maze, pumpkin patch, and horse drawn wagon rides all waiting for you still at the same low prices as the day we opened in 2007 (see details below). Don’t forget that on Friday and Saturday nights in October we haunt the maze for those brave souls not afraid of what lurks in a dark corn field. Want the Maze all to yourself? We love doing private group bookings. They are great for scouts, church youth groups, family outings, friends, and birthday parties. We offer you use of our picnic area, pavilion, field stone grill, and bonfire pit too. We can also accommodate groups during regular business hours so give us a call.</p>
 
 <hr />
 
