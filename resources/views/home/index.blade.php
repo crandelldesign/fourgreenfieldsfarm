@@ -27,7 +27,9 @@
 
 <hr />
 
-<p>Thanks to all of our wonderful customers who gave us another great and fun filled fall season.  We never get tired of seeing all the smiles, seeing old friends and meeting new ones, or hearing the screams and laughter in the Haunted Maze.  It is truly a joy and blessing to have you visit our farm.   Now its sleigh ride season so put on some warm clothes and boots, book a sleigh ride, and come enjoy Michigan’s winter wonderland.  Check out what we can offer you by clicking on our “Hay & Sleigh Rides” tab <strong>and then check the calendar on "Reservations and Events" tab and see what days are open.</strong></p>
+<p>Every year we are open, we have more fun than the year before. This is the 15th Anniversary of the Corn Maze so we will have lots of giveaways to celebrate when you visit.  Watch our Facebook page for details. Our maze, pumpkin patch, and horse drawn wagon rides are all waiting for you still at the same low prices as the day we opened in 2007 (see details below). Don't forget that on Friday and Saturday nights in October we haunt the maze for those brave souls not afraid of what lurks in a dark corn field. Want the Maze all to yourself? We love doing private group bookings. They are great for scouts, church youth groups, family outings, friends, and birthday parties. We offer you use of our picnic area, pavilion, field stone grill, and bonfire pit too. We can also accommodate groups during regular business hours so give us a call.</p>
+
+<!-- <p>Thanks to all of our wonderful customers who gave us another great and fun filled fall season.  We never get tired of seeing all the smiles, seeing old friends and meeting new ones, or hearing the screams and laughter in the Haunted Maze.  It is truly a joy and blessing to have you visit our farm.   Now its sleigh ride season so put on some warm clothes and boots, book a sleigh ride, and come enjoy Michigan’s winter wonderland.  Check out what we can offer you by clicking on our “Hay & Sleigh Rides” tab <strong>and then check the calendar on "Reservations and Events" tab and see what days are open.</strong></p> -->
 
 <hr />
 
