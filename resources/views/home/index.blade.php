@@ -27,7 +27,7 @@
 
 <hr />
 
-<p>Every year we are open, we have more fun than the year before. This is the 15th Anniversary of the Corn Maze so we will have lots of giveaways to celebrate when you visit.  Watch our Facebook page for details. Our maze, pumpkin patch, and horse drawn wagon rides are all waiting for you still at the same low prices as the day we opened in 2007 (see details below). Don't forget that on Friday and Saturday nights in October we haunt the maze for those brave souls not afraid of what lurks in a dark corn field. Want the Maze all to yourself? We love doing private group bookings. They are great for scouts, church youth groups, family outings, friends, and birthday parties. We offer you use of our picnic area, pavilion, field stone grill, and bonfire pit too. We can also accommodate groups during regular business hours so give us a call.</p>
+<p>Every year we are open, we have more fun than the year before. This is the 16th Anniversary of the Corn Maze so we will have lots of giveaways to celebrate when you visit.  Watch our Facebook page for details. Our maze, pumpkin patch, and horse drawn wagon rides are all waiting for you still at the same low prices as the day we opened in 2007 (see details below). Don't forget that on Friday and Saturday nights in October we haunt the maze for those brave souls not afraid of what lurks in a dark corn field. Want the Maze all to yourself? We love doing private group bookings. They are great for scouts, church youth groups, family outings, friends, and birthday parties. We offer you use of our picnic area, pavilion, field stone grill, and bonfire pit too. We can also accommodate groups during regular business hours so give us a call.</p>
 
 <!-- <p>Thanks to all of our wonderful customers who gave us another great and fun filled fall season.  We never get tired of seeing all the smiles, seeing old friends and meeting new ones, or hearing the screams and laughter in the Haunted Maze.  It is truly a joy and blessing to have you visit our farm.   Now its sleigh ride season so put on some warm clothes and boots, book a sleigh ride, and come enjoy Michigan’s winter wonderland.  Check out what we can offer you by clicking on our “Hay & Sleigh Rides” tab <strong>and then check the calendar on "Reservations and Events" tab and see what days are open.</strong></p> -->
 
@@ -37,7 +37,7 @@
 <div class="row hours-prices">
     <div class="col-sm-6 col-md-5">
         <h3>Corn Maze</h3>
-        <p>Saturday, September 24 to October 30</p>
+        <p>Saturday, September 23 to October 29</p>
         <h4>Hours</h4>
         <table class="table">
             <tr>
@@ -61,11 +61,11 @@
                 <td>$2</td>
             </tr>
         </table>
-        <p><small>Note: Opening day is on a Sunday, September 26 instead of the usual Saturday opening due to a family event</small></p>
+        <!-- <p><small>Note: Opening day is on a Sunday, September 26 instead of the usual Saturday opening due to a family event</small></p> -->
     </div>
     <div class="col-sm-6 col-md-5 col-md-offset-2">
         <h3>Haunted Maze</h3>
-        <p>October 7 to October 29</p>
+        <p>October 7 to October 28</p>
         <h4>Hours</h4>
         <table class="table">
             <tr>

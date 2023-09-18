@@ -8,7 +8,7 @@
             </div>
             <div class="col-sm-6 text-right header-slogan">
                 <p>From Ireland to America, We Work the Land</p>
-                <p>O Eirinn go Mericea, Saothraimid an Talamh</p>
+                <p>O Eirinn go Mericea, Oibrimid ar an Talamh</p>
                 <p>Rodney, MI 49342</p>
             </div>
         </div>
