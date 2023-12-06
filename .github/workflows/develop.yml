@@ -29,7 +29,7 @@ jobs:
         uses: appleboy/ssh-action@master
         with:
           username: ${{ secrets.SSH_USERNAME }}
-          host: 64.4.160.12
+          host: 45.4.172.174
           password: ${{ secrets.SSH_PASSWORD }}
           port: 7822
           script: "cd /var/www/fourgreenfieldsfarm/dev && chmod +x server_deploy.sh && ./server_deploy.sh"
