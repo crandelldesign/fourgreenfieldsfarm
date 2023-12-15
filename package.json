@@ -1,16 +1,10 @@
 {
-  "private": true,
-  "devDependencies": {
-    "bootstrap-sass": "^3.3.7",
-    "eonasdan-bootstrap-datetimepicker": "^4.17.42",
-    "font-awesome": "^4.7.0",
-    "gulp": "^3.9.1",
-    "handlebars": "^4.0.5",
-    "moment": "^2.13.0",
-    "slick-carousel": "^1.6.0",
-    "summernote": "^0.8.1"
+  "scripts": {
+    "sass:watch": "sass --source-map -w resources/assets/sass/stylesheet-updates.scss public/css/stylesheet-updates.css",
+    "sass:debug": "sass --source-map resources/assets/sass/stylesheet-updates.scss public/css/stylesheet-updates.css",
+    "sass:release": "sass --style=compressed resources/assets/sass/stylesheet-updates.scss public/css/stylesheet-updates.css"
   },
-  "dependencies": {
-    "laravel-elixir": "^4.0.0"
+  "devDependencies": {
+    "sass": "^1.69.5"
   }
 }

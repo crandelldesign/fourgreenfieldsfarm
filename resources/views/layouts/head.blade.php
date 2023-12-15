@@ -15,6 +15,8 @@
     </style>
 <![endif]-->
 
+<link rel="stylesheet" type="text/css" href="{{url('/')}}/css/stylesheet-updates.css" />
+
 <link rel="apple-touch-icon" sizes="57x57" href="{{url('/')}}/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="{{url('/')}}/apple-icon-60x60.png">
 <link rel="apple-touch-icon" sizes="72x72" href="{{url('/')}}/apple-icon-72x72.png">

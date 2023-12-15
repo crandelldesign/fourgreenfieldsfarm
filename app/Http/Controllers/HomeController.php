@@ -159,6 +159,16 @@ class HomeController extends Controller
         return $view;
     }
 
+    public function getEventBarn()
+    {
+        $view = view('home.event-barn');
+        $view->title = "Wedding and Event Barn";
+        $view->description = "From Ireland to America, We Work the Land - O Eirinn go Mericea, Saothraimid an Talamh";
+        $view->active_page = 'event-barn';
+
+        return $view;
+    }
+
     public function getEvents(Request $request, $month_year = null, $simple = false)
     {
         if ($month_year)

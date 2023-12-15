@@ -30,16 +30,18 @@
                     <!--<li class="{{(isset($active_page)) && $active_page=='home'?'active':''}}"><a href="{{url('/')}}">Home</a></li>-->
                     <li class="{{(isset($active_page)) && $active_page =='farm-history'?'active':''}}"><a href="{{url('/farm-history')}}">Our History</a></li>
                     <li class="{{(isset($active_page)) && ($active_page == 'maple-syrup')?'active':''}}"><a href="{{url('/')}}/maple-syrup">Syrup</a></li>
-                    <li class="{{(isset($active_page)) && ($active_page == 'honey')?'active':''}}"><a href="{{url('/')}}/honey">Honey</a></li>
-                    <li class="{{(isset($active_page)) && ($active_page == 'pumpkin-patch')?'active':''}}"><a href="{{url('/')}}/pumpkin-patch">Pumpkin Patch</a></li>
+                    <!-- <li class="{{(isset($active_page)) && ($active_page == 'honey')?'active':''}}"><a href="{{url('/')}}/honey">Honey</a></li> -->
+                    
                     <li class="dropdown {{(isset($active_page)) && ($active_page == 'maze')?'active':''}}"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Corn Maze <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                       <li><a href="{{url('/')}}/maze">How to Play</a></li>
                       <li><a href="{{url('/')}}/building-the-maze">Building the Maze</a></li>
                       <li><a href="{{url('/')}}/haunted-maze">Haunted Maze</a></li>
+                      <li><a href="{{url('/')}}/pumpkin-patch">Pumpkin Patch</a></li>
                     </ul>
                     </li>
                     <li class="{{(isset($active_page)) && ($active_page == 'rides')?'active':''}}"><a href="{{url('/')}}/rides">Hay &amp; Sleigh Rides</a></li>
+                    <li class="{{(isset($active_page)) && ($active_page == 'event-barn')?'active':''}}"><a href="{{url('/')}}/event-barn">Wedding/Event Barn</a></li>
                     <li class="{{(isset($active_page)) && ($active_page == 'events')?'active':''}}"><a href="{{url('/')}}/events">Reservations &amp; Events</a></li>
                 </ul>        
             </div><!-- /.navbar-collapse -->
