@@ -38,7 +38,7 @@
   <p>We have kept our pricing reasonable so that you can have a wonderful experience without breaking the bank.  We also only book one wedding a weekend so the barn will be available from Friday evening till Sunday at Noon to those who book it.  We also have a small pavilion with picnic tables and grill area that you may utilize if you wish free of charge.  It makes a nice spot for a low key rehearsal dinner or just relaxing after decorating for your wedding.</p>
   <p>Give us a call and arrange a tour of our barn and see for yourself what we have to offer.  We love visitors and showing off our property even if  you don't book with us.  The best way to get in touch is by calling or texting us at 231-580-1463.  You can also email us at <a href="mailto:fourgreenfieldsman@yahoo.com">fourgreenfieldsman@yahoo.com</a> </p>
 
-  <p>WARNING:<br/>
+  <p><strong>WARNING:</strong><br/>
   This is a country setting so we aren't equipped for Divas or Bridezillas.  They need to go to places that charge at least 3 times as much as us.  We are here for nice people who love the country life and hospitality and don't have an unlimited budget. </p>
 </div>
 
