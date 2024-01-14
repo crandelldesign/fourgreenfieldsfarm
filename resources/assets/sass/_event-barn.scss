@@ -1,7 +1,8 @@
 @use 'mixins' as *;
+@import 'variables';
 
 .event-barn-page {
-  h1, p {
+  h1, h2, p {
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
@@ -16,6 +17,31 @@
     margin: 16px auto 16px auto;
     > a:not(:last-child) {
       border-right: 4px solid #005a2c;
+    }
+  }
+  // Prices
+  .btn-prices {
+    background-color: $pirategold;
+    color: #fff;
+    transition: background-color 0.25s ease-in-out;
+    h2 {
+      margin-top: 0;
+      margin-bottom: 0;
+      color: #fff;
+    }
+    &:hover, &:focus {
+      background-color: darken($pirategold,15%);
+      color: #fff;
+    }
+  }
+  .prices {
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .prices-table {
+    > tbody > tr > th, > tbody > tr > td {
+      border-bottom: 1px solid #ddd;
     }
   }
 }
