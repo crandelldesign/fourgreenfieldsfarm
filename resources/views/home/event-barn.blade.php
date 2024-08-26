@@ -78,10 +78,10 @@
     <button class="btn btn-lg btn-prices" data-toggle="modal" data-target="#prices-modal"><h2>Click here to see current prices</h2></button>
   </div>
 
-  <hr>
+  <!-- <hr>
 
   <p><strong>WARNING:</strong><br/>
-  This is a country setting so we aren't equipped for Divas or Bridezillas.  They need to go to places that charge at least 3 times as much as us.  We are here for nice people who love the country life and hospitality and don't have an unlimited budget. </p>
+  This is a country setting so we aren't equipped for Divas or Bridezillas.  They need to go to places that charge at least 3 times as much as us.  We are here for nice people who love the country life and hospitality and don't have an unlimited budget. </p> -->
 </div>
 
 <div class="modal fade" tabindex="-1" role="dialog" id="prices-modal">
