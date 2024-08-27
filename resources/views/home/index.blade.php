@@ -80,7 +80,7 @@
         <table class="table">
             <tr>
                 <th>Admission</th>
-                <td>$4</td>
+                <td>$5</td>
             </tr>
         </table>
     </div>
