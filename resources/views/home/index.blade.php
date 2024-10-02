@@ -6,6 +6,10 @@
 
 @section('content')
 
+<div class="alert alert-info">
+    <p class="margin-bottom-0"><strong>We will be closed to the public this Saturday (10/5).</strong></p>
+</div>
+
 <div class="alert alert-warning">
     <p><strong>COVID-19 Information</strong></p>
     <p class="margin-bottom-0">We are an outside venue so masks are encouraged but not mandatory at the maze where there is plenty of room to do social distancing.</p>
