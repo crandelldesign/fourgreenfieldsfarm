@@ -6,9 +6,9 @@
 
 @section('content')
 
-<div class="alert alert-info">
+<!-- <div class="alert alert-info">
     <p class="margin-bottom-0"><strong>We will be closed to the public this Saturday (10/5).</strong></p>
-</div>
+</div> -->
 
 <div class="alert alert-warning">
     <p><strong>COVID-19 Information</strong></p>
