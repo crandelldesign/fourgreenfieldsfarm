@@ -7,7 +7,7 @@
 <div class="event-barn-page">
   <h1>Wedding and Event Barn</h1>
 
-  <p>We are happy to now offer a wedding and event barn for those looking for something a little out of the ordinary for their wedding or event.  Our barn has a capacity of 100 people.  You can increase the number of guests by adding a tent if you wish. The grounds around the barn are very expansive.  The barn will be a wonderful setting for your wedding or event and give you life-long memories.  We are taking bookings now for 2024. The barn is a “warm weather” venue so we anticipate our season will be from around the first of June until the first of October.</p>
+  <p>We are happy to now offer a wedding and event barn for those looking for something a little out of the ordinary for their wedding or event.  Our barn has a capacity of 100 people.  You can increase the number of guests by adding a tent if you wish. The grounds around the barn are very expansive.  The barn will be a wonderful setting for your wedding or event and give you life-long memories. The barn is a “warm weather” venue so we anticipate our season will be from around the first of June until the first of October.</p>
 
   <p>The barn is sheeted on the outside with pine lumber logged off from our farm and the inside walls are covered with oak also logged off here on the farm.  We have done our very best to make this a real barn to give you a true “out in the country” experience.  Naturally, we have added some Irish touches and our famous Irish hospitality will be front and center at the barn.</p>
 
@@ -44,7 +44,9 @@
   <p>We have kept our pricing reasonable so that you can have a wonderful experience without breaking the bank.  We also only book one wedding a weekend so the barn will be available from Friday evening till Sunday at Noon to those who book it.  We also have a small pavilion with picnic tables and grill area that you may utilize if you wish free of charge.  It makes a nice spot for a low key rehearsal dinner or just relaxing after decorating for your wedding.</p>
   <p>Give us a call and arrange a tour of our barn and see for yourself what we have to offer.  We love visitors and showing off our property even if  you don't book with us.  The best way to get in touch is by calling or texting us at 231-580-1463.  You can also email us at <a href="mailto:fourgreenfieldsman@yahoo.com">fourgreenfieldsman@yahoo.com</a> </p>
 
-  <!-- <div class="prices">
+  <hr>
+
+  <div class="prices">
 
     <h2 class="text-center">Four Green Fields Farm<br>Wedding Venue Price List</h2>
 
@@ -72,13 +74,11 @@
     Clean up on Sunday to be completed by 12:00 pm.</p>
   </div>
 
-  <hr> -->
-
-  <div class="text-center">
+  <!-- <div class="text-center">
     <button class="btn btn-lg btn-prices" data-toggle="modal" data-target="#prices-modal"><h2>Click here to see current prices</h2></button>
   </div>
 
-  <!-- <hr>
+  <hr>
 
   <p><strong>WARNING:</strong><br/>
   This is a country setting so we aren't equipped for Divas or Bridezillas.  They need to go to places that charge at least 3 times as much as us.  We are here for nice people who love the country life and hospitality and don't have an unlimited budget. </p> -->
