@@ -10,6 +10,8 @@
                 <p>From Ireland to America, We Work the Land</p>
                 <p>O Eirinn go Mericea, Oibrimid ar an Talamh</p>
                 <p>Rodney, MI 49342</p>
+                <p><a href="tel:231-580-1463">231-580-1463</a></p>
+                <p><a href="mailto:fourgreenfieldsman@yahoo.com">fourgreenfieldsman@yahoo.com</a></p>
             </div>
         </div>
         <nav class="navbar">
