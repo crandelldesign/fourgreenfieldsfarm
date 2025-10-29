@@ -34,7 +34,7 @@
 
 <p>Our &quot;haunters&quot; are members of local community groups like 4H and volunteer Fire Departments who get 50% of the night's income for their work so while you're having fun you are also helping out the local community. If you are a member of a community organization that would be interested in having some fun and raising funds for your organization, give us a call at 231.580.1463 or drop us an email using the link on the home page.  
 
-<p>The cost of the Haunted Maze is just $4.  You won't find this much fun at this price anywhere in Big Rapids.</p>
+<p>The cost of the Haunted Maze is just $5.  You won't find this much fun at this price anywhere in Big Rapids.</p>
 
 @stop
 
