@@ -23,7 +23,7 @@
 <div class="clearfix visible-xs"></div>
 <p>We are located about 7 miles east of US 131 off exit 139 and about 5 miles east of the City of Big Rapids.</p>
 
-<p class="text-center"><a class="btn btn-camarone" href="{{url('/')}}/directions"><i class="fa fa-map-o" aria-hidden="true"></i> Driving &amp; Directions</a><span class="hidden-xs">&nbsp;&nbsp;&nbsp;</span><br class="visible-xs-block"><br class="visible-xs-block"><a class="btn btn-lynch" href="http://www.facebook.com/pages/Rodney-MI/Four-Green-Fields-Farm/101570023237276"><i class="fa fa-facebook-official" aria-hidden="true"></i> Find Us on Facebook</a></p>
+<p class="text-center"><a class="btn btn-camarone" href="{{url('/')}}/directions"><i class="fa fa-map-o" aria-hidden="true"></i> Driving &amp; Directions</a><span class="hidden-xs">&nbsp;&nbsp;&nbsp;</span><br class="visible-xs-block"><br class="visible-xs-block"><a class="btn btn-lynch" href="https://www.facebook.com/people/Four-Green-Fields-Farm/100067042143292/"><i class="fa fa-facebook-official" aria-hidden="true"></i> Find Us on Facebook</a></p>
 
 <hr />
 
